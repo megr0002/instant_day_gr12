@@ -6,45 +6,45 @@
 @import "tailwindcss-intersect";
 
 @font-face {
-  font-family: 'Honk';
-  src: url('/fonts/Honk-Regular-VariableFont_MORF,SHLN.ttf') format('truetype');
+  font-family: 'Helvetica';
+  src: url('/fonts/Helvetica.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Quicksand';
-  src: url('/fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Domine';
-  src: url('/fonts/Domine-Regular.ttf') format('truetype');
+  font-family: 'Courier';
+  src: url('/fonts/Courier.ttf') format('truetype');
 }
 
 @theme {
-  /* Her tilføjes theme variable // tokens */
+  /************ Farver ************/
+  /* Hvid */
+  --color-primary-100: #FFFFFF; /* lightest */
+  --color-primary-400: #F3F3EF; /* base */
+  --color-primary-700: #D1D1CB; /* darker */
 
-  /*Farver */
-  --color-primary-400: #00E4F5;
-  --color-primary-500: #006269;
-  --color-primary-600: #006D75;
-  --color-secondary-400: #F5E400;
-  --color-secondary-500: #F5A600;
-  --color-secondary-600: #F57A00;
+    /* Sort/mørkegrå */
+  --color-secondary-100: #6C6767;
+  --color-secondary-400: #322E2E; /* base */
+  --color-secondary-700: #1A1818;
 
-  /*Typografi */
-  --font-display: 'Honk', monospace;
-  --font-sans: 'Quicksand', sans-serif;
-  --font-serif: 'Domine', serif;
+    /* Rød */
+  --color-tertiary-100: #E35D5D;
+  --color-tertiary-400: #BA0606; /* base */
+  --color-tertiary-700: #750404;
+
+  /************ Typografi **************/
+  --font-sans: 'Helvetica', sans-serif;
+  --font-mono: 'Courier', monospace;
 }
 
 @layer base {
-
+  /* base styles */
 }
 
-@layer components{
-
+@layer components {
+  /* animationer osv. */
 }
 
-@layer utilities{
-  
+@layer utilities {
+  /* custom utilities */
 }

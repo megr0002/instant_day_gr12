@@ -1,0 +1,85 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "./Button.astro";
+---
+
+<MainLayout title="Form">
+  <!-- Main form wrapper -->
+  <form class="max-w-3xl mx-auto space-y-6 font-mono text-secondary-400">
+    
+    <!-- Form heading -->
+    <h1 class="text-4xl font-extrabold">SUBMIT YOUR INSTANT</h1>
+
+    <!-- Section: Name + Email -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Full name -->
+      <div class="flex flex-col">
+        <label for="fullname" class="font-bold mb-1">Your full name</label>
+        <input
+          type="text"
+          id="fullname"
+          class="border border-black px-3 py-2 focus:outline-none"
+        />
+      </div>
+
+      <!-- Email -->
+      <div class="flex flex-col">
+        <label for="email" class="font-bold mb-1">Email address</label>
+        <input
+          type="email"
+          id="email"
+          class="border border-black px-3 py-2 focus:outline-none"
+        />
+      </div>
+    </section>
+
+    <!-- Section: Submission title + Upload -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Submission title -->
+      <div class="flex flex-col">
+        <label for="title" class="font-bold mb-1">Submission title</label>
+        <input
+          type="text"
+          id="title"
+          class="border border-black px-3 py-2 focus:outline-none"
+        />
+      </div>
+
+      <!-- File upload -->
+      <div class="flex flex-col">
+        <label for="upload" class="font-bold mb-1">Photo upload</label>
+        <input
+          type="file"
+          id="upload"
+          class="border border-black px-3 py-2 file:cursor-pointer file:border-0 file:underline file:text-secondary-400"
+        />
+      </div>
+    </section>
+
+    <!-- Section: Description -->
+    <div class="flex flex-col">
+      <label for="description" class="font-bold mb-1">Submission description or story</label>
+      <textarea
+        id="description"
+        rows="5"
+        class="border border-black px-3 py-2 focus:outline-none"
+      ></textarea>
+    </div>
+
+    <!-- Terms checkbox -->
+    <div class="flex items-center space-x-2">
+      <input
+        type="checkbox"
+        id="terms"
+        class="border border-black rounded-none focus:ring-0"
+      />
+      <label for="terms" class="text-sm">
+        I have read and agree to <a href="#" class="underline font-bold">the terms and conditions</a>
+      </label>
+    </div>
+
+    <!-- Submit button -->
+  <Button type="submit" variant="secondary">
+  SUBMIT YOUR INSTANT
+</Button>
+</MainLayout>
