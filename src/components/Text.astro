@@ -10,8 +10,8 @@ p: "text-[16px] lg:text-[22px]",
   p_smallest: "text-[14px] lg:text-[16px]",
 };
 
-// Alle p bruger mono (Courier) font
-const fontClass = "font-mono";
+// Alle p bruger mono (Courier) font og sekundær farve
+const fontClass = "font-mono text-secondary-400";
 ---
 <p class:list={[fontClass, sizeClasses[teksttype], stylingclasses]}>
   <slot />
