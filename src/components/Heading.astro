@@ -1,20 +1,43 @@
 ---
 // Henter parametrene fra Astro.props
-const { htmlheading="h2", size="medium", font="sans", stylingclasses=""} = Astro.props; 
+const { htmlheading = "h2", size = "h2", font = "", stylingclasses = "" } = Astro.props;
 const Htmlheading = htmlheading;
- 
-//Definer den styling (Tailwind classes), der gør sig gældende for de forskellige størrelser.
+
+// Størrelser (px) mobil → desktop
 const sizeClasses = {
-"large": "text-3xl lg:text-6xl",
-"medium": "text-2xl lg:text-3xl",
-"small": "text-xl",
+  hero: "text-[65px] lg:text-[200px] uppercase",
+  h1: "text-[42px] lg:text-[95px] uppercase",
+  h2: "text-[35px] lg:text-[75px] uppercase",
+  h3: "text-[22px] lg:text-[35px]",
+  h4: "text-[22px] lg:text-[26px]",
 };
 
-//Definer den styling (Tailwind classes), der gør sig gældende for de forskellige skrifttyper.
-const fontClasses = {
-"display": "font-display",
-"sans": "font-sans",
-"serif": "font-serif",
+// To måder at vælge font på:
+// A) efter variant (din regel: h1–h3 sans, h4 mono)
+// B) efter eksplicit prop (sans/serif/display/mono) hvis den sættes
+const fontBySize = {
+  hero: "font-sans",
+  h1: "font-sans",
+  h2: "font-sans",
+  h3: "font-sans",
+  h4: "font-mono",
 };
+const fontByName = {
+  display: "font-display",
+  sans: "font-sans",
+  serif: "font-serif",
+  mono: "font-mono",
+};
+
+// Brug eksplicit font hvis givet; ellers auto fra size
+const fontClass = font ? fontByName[font] : fontBySize[size];
 ---
-<Htmlheading class:list={[stylingclasses, sizeClasses[size], fontClasses[font]]}><slot /></Htmlheading>
+<Htmlheading
+  class:list={[
+    stylingclasses,
+    sizeClasses[size] || sizeClasses.h2,
+    fontClass,
+  ]}
+>
+  <slot />
+</Htmlheading>

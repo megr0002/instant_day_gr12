@@ -1,40 +1,43 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 @import "tailwindcss-animated";
 @import "tailwindcss-intersect";
 
+/* Helvetica Neue lt STD 95 */
 @font-face {
-  font-family: 'Helvetica';
-  src: url('/fonts/Helvetica.ttf') format('truetype');
+  font-family: "Helvetica";
+  src: url("/fonts/helvetica_neue_lt_std_95_black-webfont.woff2") format("woff2"), url("/fonts/helvetica_neue_lt_std_95_black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'Courier';
-  src: url('/fonts/Courier.ttf') format('truetype');
+  font-family: "Courier";
+  src: url("/fonts/Courier.ttf") format("truetype");
 }
 
 @theme {
   /************ Farver ************/
   /* Hvid */
-  --color-primary-100: #FFFFFF; /* lightest */
-  --color-primary-400: #F3F3EF; /* base */
-  --color-primary-700: #D1D1CB; /* darker */
+  --color-primary-100: #ffffff; /* lightest */
+  --color-primary-400: #f3f3ef; /* base */
+  --color-primary-700: #d1d1cb; /* darker */
 
-    /* Sort/mørkegrå */
-  --color-secondary-100: #6C6767;
-  --color-secondary-400: #322E2E; /* base */
-  --color-secondary-700: #1A1818;
+  /* Sort/mørkegrå */
+  --color-secondary-100: #6c6767;
+  --color-secondary-400: #322e2e; /* base */
+  --color-secondary-700: #1a1818;
 
-    /* Rød */
-  --color-tertiary-100: #E35D5D;
-  --color-tertiary-400: #BA0606; /* base */
+  /* Rød */
+  --color-tertiary-100: #e35d5d;
+  --color-tertiary-400: #ba0606; /* base */
   --color-tertiary-700: #880000;
 
   /************ Typografi **************/
-  --font-sans: 'Helvetica', sans-serif;
-  --font-mono: 'Courier', monospace;
+  --font-sans: "Helvetica", sans-serif;
+  --font-mono: "Courier", monospace;
 }
 
 @layer base {
