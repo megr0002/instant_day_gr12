@@ -30,7 +30,7 @@
     /* Rød */
   --color-tertiary-100: #E35D5D;
   --color-tertiary-400: #BA0606; /* base */
-  --color-tertiary-700: #750404;
+  --color-tertiary-700: #880000;
 
   /************ Typografi **************/
   --font-sans: 'Helvetica', sans-serif;
@@ -46,5 +46,5 @@
 }
 
 @layer utilities {
-  /* custom utilities */
+  /* custom utilities, browser reset */
 }
