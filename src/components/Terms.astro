@@ -1,0 +1,81 @@
+---
+import Button from './Button.astro';
+import Text from './Text.astro';
+---
+
+<div x-data="{ show: false }" class="relative">
+  <!-- Trigger button -->
+  <button 
+    x-on:click="show = true" 
+    class="underline text-blue-600"
+  >
+    Terms and Conditions
+  </button>
+
+  <!-- Modal Overlay -->
+  <div 
+    x-show="show" 
+    class="fixed inset-0 bg-black/20 backdrop-blur-md flex justify-center items-center z-50 transition-opacity duration-300"
+    x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition ease-in duration-200"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+  >
+    <!-- Modal Content -->
+    <div 
+      class="bg-primary-400 border border-gray-300 rounded-xl w-11/12 max-w-3xl max-h-[90vh] p-6 sm:p-8 overflow-y-auto shadow-lg relative"
+      x-on:click.away="show = false"
+    >
+      <Text teksttype="fed">By participating in the contest, you accept the following terms and conditions:</Text>
+
+      <Text teksttype="fed">Participation</Text>
+      <Text teksttype="brødtekst">
+        The competition is open to all photographers, both amateurs and professionals, who are over 18 years old.
+      </Text>
+
+      <Text teksttype="fed">Instant Photo</Text>
+      <Text teksttype="brødtekst">
+        Every submission has to be an analogue instant photo - not a digital montage made in a photo editing suite. The instant can be made in various ways, with analogue instant cameras, digital instant cameras like ie. the Fujifilm EVO or scan-and-print tools like ie. the Polaroid Lab. The instant photo can be manipulated with analogue processes - the organizers encourage instant photography experiments.
+      </Text>
+      <Text teksttype="brødtekst">
+        The submission can depict the instant photo in many ways: As a flat scan without or without the instant photo frame, as a photo showing the instants in a frame, on the wall etc. The instant doesn’t need to be just one photo: It can be a panorama or collage of multiple instants that make up one submission.
+      </Text>
+
+      <Text teksttype="fed">Consent</Text>
+      <Text teksttype="brødtekst">
+        It is prohibited to upload photographs of people who have not given consent to the publication of the image. Images of people in private or embarrassing situations, regardless of whether they are photographed in a public place, are not allowed.
+      </Text>
+
+      <Text teksttype="fed">Legal stuff</Text>
+      <Text teksttype="brødtekst">
+        The organizers reserve the right to disqualify any participant who violates these conditions. The organizers assume no responsibility for any loss, damage or injury that may arise as a result of participation in the competition or the use of prizes. Participants release the organizers from any claim, lawsuit or liability related to their participation in the competition.
+      </Text>
+
+      <Text teksttype="fed">Number of submissions</Text>
+      <Text teksttype="brødtekst">
+        You can enter the competition with a total of five submissions.
+      </Text>
+
+      <Text teksttype="fed">Usage rights</Text>
+      <Text teksttype="brødtekst">
+        By submitting one or more images and thereby participating in the competition, you agree that the image may be used for the promotion of the photo competition and possibly in physical exhibition spaces afterwards. The organizers will credit the participants wherever practical and reasonably possible.
+      </Text>
+
+      <Text teksttype="fed">Copyright</Text>
+      <Text teksttype="brødtekst">
+        You must be the author of the submitted instants and have the rights to publish them. The instants must be free of third party rights. Participants retain all copyright in their submitted instants. By submitting instants to the competition, participants grant the organizers a non-exclusive license to use, reproduce and publish the submitted images in connection with the promotion of the competition, including on social media platforms, websites and printed materials. The organizers will credit the participants wherever practical and reasonable.
+      </Text>
+
+      <Text teksttype="fed">Announcement of Winners</Text>
+      <Text teksttype="brødtekst">
+        The winners of the competition will be announced on the official website and/or social media platforms of the organizers. By participating in the competition, the winners consent to the publication of their names and submitted photos for promotional purposes.
+      </Text>
+
+      <div class="flex justify-end mt-6">
+        <Button variant="primary" x-on:click="show = false">Go back</Button>
+      </div>
+    </div>
+  </div>
+</div>

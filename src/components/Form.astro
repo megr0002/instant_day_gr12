@@ -1,10 +1,12 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "./Button.astro";
+import Terms from "./Terms.astro";
 ---
 
 <MainLayout title="Form">
   <!-- Main form wrapper -->
+   <div x-data="{ open: false }">
   <form class="max-w-3xl mx-auto space-y-6 font-mono text-secondary-400">
     
     <!-- Form heading -->
@@ -74,12 +76,25 @@ import Button from "./Button.astro";
         class="border border-black rounded-none focus:ring-0"
       />
       <label for="terms" class="text-sm">
-        I have read and agree to <a href="#" class="underline font-bold">the terms and conditions</a>
+        I have read and agree to 
+        <button 
+         x-on:click="open = ! open"
+          class="underline font-bold"
+              >
+          the terms and conditions
+        </button>
       </label>
     </div>
 
     <!-- Submit button -->
-  <Button type="submit" variant="secondary">
-  SUBMIT YOUR INSTANT
-</Button>
+    <Button type="submit" variant="secondary">
+      SUBMIT YOUR INSTANT
+    </Button>
+  </form>
+
+  <!-- Include the modal -->
+   <div x-show="open">
+<Terms /> 
+   </div>
+</div>
 </MainLayout>
