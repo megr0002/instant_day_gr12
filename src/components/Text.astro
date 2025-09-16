@@ -11,7 +11,10 @@ p: "text-[16px] lg:text-[22px]",
 };
 
 // Alle p bruger mono (Courier) font og sekundær farve
-const fontClass = "font-mono text-secondary-400";
+// Brug mono-font, men kun sæt standard-farve hvis brugeren ikke har givet en text-* klasse
+const fontClass = "font-mono";
+const userHasTextColor = /\btext-(?:primary|secondary|tertiary)-(?:100|400|700)\b/.test(stylingclasses);
+const defaultColor = userHasTextColor ? "" : "text-secondary-400";
 ---
 <p class:list={[fontClass, sizeClasses[teksttype], stylingclasses]}>
   <slot />
