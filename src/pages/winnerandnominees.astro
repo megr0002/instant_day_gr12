@@ -4,9 +4,25 @@ import Link from "../components/Link.astro";
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
+import NomineeCard from "../components/NomineeCard.astro";
 ---
 <MainLayout title="Titel">
-	<main>
-
+	    <main>
+            <Heading size="h2" htmlheading="h2" class="px-4 md:px-20">BEST OF 2025 - NOMINEES</Heading>
+            <div class="w-full overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                <section class="flex flex-row gap-6 px-4 md:px-20 py-10 w-max">
+                    <NomineeCard title="01 - Amager fælled" img="/img/test.png" submitter="Stefan Grage" description="A little snap from Amager Fælled, a large common in the southwestern part of Copenhagen, Denmark. Taken with a Lomomatic Square." />
+                    <NomineeCard title="02 - Amager Forbrænding" img="/img/test.png"
+                    submitter="Stefan Grage" description="I’d give my right arm for a cigarette. Taken with a Lomomatic Square." />
+                    <NomineeCard title="03 - Amager Strand" img="/img/test.png"
+                    submitter="Stefan Grage" description="From this angle, copenhagen looks like a big city. Taken with a Polaroid Now+ gen 2, with a yellow tint filter." />
+                    <NomineeCard title="04 - Hands off my happy meal!" img="/img/test.png"
+                    submitter="Stefan Grage" description="A casual snap from Burger King. As it shows, the youngest kid didn’t want to share his happy meal (or whatever a kids meal is called in Burger King). Taken with an Instax Mini (can’t remember which camera)." />
+                    <NomineeCard title="03 - Amager Strand" img="/img/test.png"
+                    submitter="Stefan Grage" description="From this angle, copenhagen looks like a big city. Taken with a Polaroid Now+ gen 2, with a yellow tint filter." />
+                    <NomineeCard title="03 - Amager Strand" img="/img/test.png"
+                    submitter="Stefan Grage" description="From this angle, copenhagen looks like a big city. Taken with a Polaroid Now+ gen 2, with a yellow tint filter." />
+                </section>
+            </div>
     </main>
 </MainLayout>
