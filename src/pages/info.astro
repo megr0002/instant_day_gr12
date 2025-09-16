@@ -18,8 +18,9 @@ import Button from "../components/Button.astro";
 <section class="bg-secondary-400 p-5 grid lg:grid-cols-12 lg:gap-5 lg:pb-40">
     <Heading size="h2" htmlheading="h2" stylingclasses="text-primary-400 pt-18 pb-5 lg:col-start-2 lg:col-end-12 lg:text-right">The judges</Heading>
     <div class="grid grid-cols-2 gap-5 
-    lg:col-start-2 lg:col-end-6
-    lg:block 
+    lg:grid-cols-12
+    lg:col-start-1 lg:col-end-13
+    lg:row-start-2 z-10
     lg:h-[560px]
     lg:overflow-y-auto
     lg:snap-y lg:snap-mandatory
@@ -27,15 +28,15 @@ import Button from "../components/Button.astro";
     lg:[scrollbar-width:none] lg:[&::-webkit-scrollbar]:hidden
     ">
         <img src="/img/placeholder.png" alt="Jonas Hasle" class="w-full object-cover
-                lg:h-[560px] lg:snap-start lg:flex-none">
+                lg:h-[560px] lg:snap-start lg:flex-none lg:col-start-2 lg:col-end-7">
         <img src="/img/placeholder.png" alt="Anders Dollerup" class="w-full object-cover
-                lg:h-[560px] lg:snap-start lg:flex-none">
+                lg:h-[560px] lg:snap-start lg:flex-none lg:col-start-2 lg:col-end-7">
         <img src="/img/placeholder.png" alt="Birgitte Heide" class="w-full object-cover
-                lg:h-[560px] lg:snap-start lg:flex-none">
+                lg:h-[560px] lg:snap-start lg:flex-none lg:col-start-2 lg:col-end-7">
         <img src="/img/placeholder.png" alt="Stefan Grage" class="w-full object-cover
-                lg:h-[560px] lg:snap-start lg:flex-none">
+                lg:h-[560px] lg:snap-start lg:flex-none lg:col-start-2 lg:col-end-7">
     </div>
-    <div class="lg:col-start-7 lg:col-end-12 lg:flex lg:flex-col lg:justify-end">
+    <div class="lg:col-start-7 lg:col-end-12 lg:row-start-2 lg:flex lg:flex-col lg:justify-end">
     <Text stylingclasses="text-primary-400 pt-5 pb-2 lg:pb-5"><span class="text-tertiary-100">Jonas Hasle</span> - Assistant lecturer, Multimedia Design programme at EK.</Text>
     <Text stylingclasses="text-primary-400 pb-2 lg:pb-5"><span class="text-tertiary-100">Anders Dollerup</span> - Associate lecturer, Multimedia Design programme at EK.</Text>
     <Text stylingclasses="text-primary-400 pb-2 lg:pb-5"><span class="text-tertiary-100">Birgitte Heide</span> - Associate lecturer, Multimedia Design programme at EK.</Text>
