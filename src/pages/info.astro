@@ -8,22 +8,32 @@ import Button from "../components/Button.astro";
 <MainLayout title="Titel">
 	<main>
 <section>
-    <img src="/img/microphones.png" alt="Microphones" />
-    <Heading size="h1" htmlheading="h1" stylingclasses="text-tertiary-400">Who are we?</Heading>
-    <Text>Instant Day is a small project run by a couple of lecturers from the Multimedia Design programme at EK - Business Academy Copenhagen.</Text>
-    <Text>Instant Day is a bi-annual project where lecturers and students collaborate on a digital design and communication project related to the Instant Day competition (this website). In essence, we just want to promote instant photography and have fun while doing it. Cheers.</Text>
+    <img src="/img/microphones.png" alt="Microphones" class="mt-20"/>
+    <Heading size="h1" htmlheading="h1" stylingclasses="text-tertiary-400 px-5">Who are we?</Heading>
+    <Text stylingclasses="px-5 pb-2">Instant Day is a small project run by a couple of lecturers from the Multimedia Design programme at <span class="text-tertiary-400">EK – Business Academy Copenhagen</span>.</Text>
+    <Text stylingclasses="px-5 pb-18">Instant Day is a bi-annual project where <span class="text-tertiary-400">lecturers and students</span> collaborate on a digital design and communication project related to the Instant Day competition (this website). In essence, we just want to promote instant photography and have <span class="text-tertiary-400">fun</span> while doing it. Cheers.</Text>
 </section>
-<section class="bg-secondary-400">
-    <Heading size="h2" htmlheading="h2" stylingclasses="text-primary-400">The judges</Heading>
-    <img src="/img/placeholder.png" alt="">
-    <img src="/img/placeholder.png" alt="">
-    <img src="/img/placeholder.png" alt="">
-    <img src="/img/placeholder.png" alt="">
-    <Text stylingclasses="text-primary-400">Jonas Hasle (Assistant lecturer, Multimedia Design programme at EK)</Text>
-    <Text>Anders Dollerup (Associate lecturer, Multimedia Design programme at EK)</Text>
-    <Text>Birgitte Heide (Associate lecturer, Multimedia Design programme at EK)</Text>
-    <Text>Stefan Grage (Associate lecturer, Multimedia Design programme at EK)</Text>
-    <Text>Students on the Digital Design Elective on the Multimedia Design programme at EK</Text>
+<section class="bg-secondary-400 p-5">
+    <Heading size="h2" htmlheading="h2" stylingclasses="text-primary-400 pt-18 pb-5">The judges</Heading>
+    <div class="grid grid-cols-2 gap-5">
+        <img src="/img/placeholder.png" alt="Jonas Hasle">
+        <img src="/img/placeholder.png" alt="Anders Dollerup">
+        <img src="/img/placeholder.png" alt="Birgitte Heide">
+        <img src="/img/placeholder.png" alt="Stefan Grage">
+    </div>
+    <Text stylingclasses="text-primary-400 pt-5 pb-2"><span class="text-tertiary-100">Jonas Hasle</span> - Assistant lecturer, Multimedia Design programme at EK.</Text>
+    <Text stylingclasses="text-primary-400 pb-2"><span class="text-tertiary-100">Anders Dollerup</span> - Associate lecturer, Multimedia Design programme at EK.</Text>
+    <Text stylingclasses="text-primary-400 pb-2"><span class="text-tertiary-100">Birgitte Heide</span> - Associate lecturer, Multimedia Design programme at EK.</Text>
+    <Text stylingclasses="text-primary-400 pb-2"><span class="text-tertiary-100">Stefan Grage</span> - Associate lecturer, Multimedia Design programme at EK.</Text>
+    <Text stylingclasses="text-primary-400 pb-18"><span class="text-tertiary-100">Students</span> on the Digital Design Elective on the Multimedia Design programme at EK.</Text>
+</section>
+<section>
+    <img src="/img/kea.png" alt="Kea Guldbergsgade">
+    <Heading size="h2" htmlheading="h2" stylingclasses="text-tertiary-400 pt-5 px-5">Sponsers</Heading>
+    <Text stylingclasses="px-5 pb-15">Instant Day is not affiliated to any companies within the Instant Photography industry. The only organisation backing us is EK - Business Academy Copenhagen. At least so far...</Text>
+    <div class="flex justify-end">
+      <Button stylingclasses="mr-5 mb-18 ">Explore EK</Button>
+    </div>
 </section>
     </main>
 </MainLayout>
