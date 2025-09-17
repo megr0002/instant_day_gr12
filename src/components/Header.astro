@@ -3,13 +3,13 @@ const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 ---
 <header x-data="{ showmenu: false }" class="" >
-    <div id="navbar" class="container mx-auto p-4 flex flex-row justify-between items-center">
+    <div id="navbar" class="container mx-auto p-4 flex flex-row justify-between items-center bg-primary-400 border-b-2 border-secondary-400">
         <div id="logo">
             <a href="/">
                 <img src="/img/logo.svg" alt="Instant Day Logo" class="w-14 h-auto">
             </a>
         </div>
-        <nav id="desktopmenu" class="hidden lg:block">
+        <!-- <nav id="desktopmenu" class="hidden lg:block">
             <ul class="flex flex-row gap-4">
                 <li class="">
                     <a href="/" class={currentPath === "" ? "italic font-bold" : "italic"}>Forside</a>
@@ -18,17 +18,37 @@ const currentPath = pathname.slice(1); // remove the first "/"
                     <a href="/komponentbibliotek/" class={currentPath === "komponentbibliotek/" ? "italic font-bold" : "italic"}>Komponentbibliotek</a>
                 </li>
             </ul>
-        </nav>
-        <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        </nav> -->
+        <!-- burgermenu knap -->
+         <button id="burgermenu" x-on:click="showmenu = ! showmenu" class="flex flex-col items-center cursor-pointer text-center">
+            <div class="w-14 h-1 bg-secondary-400 my-1"></div>
+            <div class="w-14 h-1 bg-secondary-400 my-1"></div>
+            <p class="font-sans uppercase text-secondary-400">menu</p>
+         <!-- </button>
+        <button id="burgermenu" class="" x-on:click="showmenu = ! showmenu"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
 </svg>
-</button>
+</button> -->
     </div>
-    <nav id="mobilmenu" class="flex flex-col content-center" 
+    <nav id="mobilmenu" class="flex flex-col content-center  bg-tertiary-400 " 
     x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
-        <ul class="border-t-2 border-b-2 border-black">
-            <li class="text-center py-2"><a href="/" class={currentPath === "" ? "italic font-bold" : "italic"}>Forside</a></li>
-            <li class="text-center py-2"><a href="/komponentbibliotek/" class={currentPath === "komponentbibliotek/" ? "italic font-bold" : "italic"}>Komponentbibliotek</a></li>
+        <ul class="">
+            <li class="text-right py-2 text-primary-400 text-[30px] lg:text-[95px]">
+                <a href="/" class={currentPath === "" ? "italic font-bold" : "italic"}>Home</a>
+            </li>
+            <li class="text-right py-2  text-primary-400 text-[30px] lg:text-[95px]">
+                <a href="/shareyourinstant/" class={currentPath === "shareyourinstant/" ? "italic font-bold" : "italic"}>Share your instant</a>
+            </li>
+            <li class="text-right py-2  text-primary-400 text-[30px] lg:text-[95px]">
+                <a href="/winnerandnominees/" class={currentPath === "winnerandnominees/" ? "italic font-bold" : "italic"}>Nominees</a>
+            </li>
+            <li class="text-right py-2  text-primary-400 text-[30px] lg:text-[95px]">
+                <a href="/info/" class={currentPath === "info/" ? "italic font-bold" : "italic"}>Who are we?</a>
+            </li>
+            <li class="text-right py-2  text-primary-400 text-[30px] lg:text-[95px]">
+                <a href="/komponentbibliotek/" class={currentPath === "komponentbibliotek/" ? "italic font-bold" : "italic"}>Komponentbibliotek</a>
+            </li>
+            
         </ul>
     </nav>
 </header>
