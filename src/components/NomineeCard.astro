@@ -5,15 +5,17 @@ import Text from "../components/Text.astro";
 ---
 
 <!-- NomineeCard.astro -->
-<div class="w-72 flex-shrink-0 bg-primary-400 border-2 border-secondary-400 shadow-md p-4 md:p-8">
+<div
+  class="w-72 flex-shrink-0 bg-primary-100 border-2 border-secondary-400 shadow-md p-4 md:p-8"
+>
   <Heading size="h4" htmlheading="h4" class="font-mono mb-2">{title}</Heading>
-  
-  <img src={img} alt={alt_tekst ?? title} class="w-full object-cover mb-4" />
-  
+
+  <img src={img} alt={alt_tekst ?? title} class="w-full object-cover my-4" />
+
   <Text teksttype="p_smallest">
     By: {submitter}
   </Text>
-  
+
   <Text teksttype="p_smaller" stylingclasses="mt-5 ">
     {description}
   </Text>
