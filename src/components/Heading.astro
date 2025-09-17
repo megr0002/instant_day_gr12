@@ -1,6 +1,11 @@
 ---
 // Henter parametrene fra Astro.props
-const { htmlheading = "h2", size = "h2", font = "", stylingclasses = "" } = Astro.props;
+const {
+  htmlheading = "h2",
+  size = "h2",
+  font = "",
+  stylingclasses = "",
+} = Astro.props;
 const Htmlheading = htmlheading;
 
 // Størrelser (px) mobil → desktop
@@ -32,12 +37,9 @@ const fontByName = {
 // Brug eksplicit font hvis givet; ellers auto fra size
 const fontClass = font ? fontByName[font] : fontBySize[size];
 ---
+
 <Htmlheading
-  class:list={[
-    stylingclasses,
-    sizeClasses[size] || sizeClasses.h2,
-    fontClass,
-  ]}
+  class:list={[stylingclasses, sizeClasses[size] || sizeClasses.h2, fontClass]}
 >
   <slot />
 </Htmlheading>
