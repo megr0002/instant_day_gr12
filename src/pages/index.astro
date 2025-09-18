@@ -150,17 +150,9 @@ import Button from "../components/Button.astro";
   <div class="hidden lg:flex lg:col-start-4 lg:row-start-5"></div>
   <div class="hidden lg:flex lg:col-start-5 lg:row-start-5"></div>
 </section>
-    <!-- Hero Text -->
-    <Heading
-      size="hero"
-      htmlheading="h1"
-      stylingclasses="col-span-12 lg:col-start-2 lg:col-end-12 text-tertiary-400 text-center lg:text-left mt-10 lg:mt-0"
-    >
-      Instant Day
-    </Heading>
-
+   
     <!-- Event Info -->
-    <section>
+    <section class="bg-tertiary-400 text-right">
       <Text
         stylingclasses="col-span-12 text-tertiary-400 text-center lg:text-left mt-2 lg:mt-5 uppercase tracking-widest"
       >
@@ -183,88 +175,53 @@ import Button from "../components/Button.astro";
     </section>
 
     <!-- What is Instant Day Section -->
-    <section class="grid grid-cols-12 gap-5 mt-10 px-5 lg:px-0">
-      <Heading
-        size="h2"
-        htmlheading="h2"
-        stylingclasses="col-span-12 lg:col-start-2 lg:col-end-12 text-tertiary-400 mt-5"
-      >
-        What is Instant Day?
-      </Heading>
-      <Text stylingclasses="col-span-12 lg:col-start-2 lg:col-end-7 mt-2">
-        Instant Day is a fun, educational event where participants explore
-        instant photography, share their creations, and celebrate the art of
-        instant cameras.
-      </Text>
-    </section>
 
     <!-- Why Instant Photography Section -->
-    <section
-      class="grid grid-cols-12 gap-5 mt-10 px-5 lg:px-0 bg-secondary-400 py-10"
-    >
-      <Heading
-        size="h2"
-        htmlheading="h2"
-        stylingclasses="col-span-12 lg:col-start-2 lg:col-end-12 text-primary-400"
-      >
-        Why Instant Photography?
-      </Heading>
-      <Text
-        stylingclasses="col-span-12 lg:col-start-2 lg:col-end-7 mt-2 text-primary-100"
-      >
-        Instant photography allows you to capture moments, share stories, and
-        see results instantly. It’s fun, tangible, and encourages creativity.
-      </Text>
-    </section>
+
 
     <!-- How to Participate Section -->
-    <section class="grid grid-cols-12 gap-5 mt-10 px-5 lg:px-0">
-      <Heading
-        size="h2"
-        htmlheading="h2"
-        stylingclasses="col-span-12 lg:col-start-2 lg:col-end-12 text-tertiary-400 mt-5"
-      >
-        How to Participate
-      </Heading>
-
-      <div class="col-span-12 lg:col-start-2 lg:col-end-7 mt-5 space-y-10">
-        <!-- Step 1 -->
-        <div class="flex items-start space-x-5">
-          <span class="font-bold text-tertiary-400 text-2xl">1</span>
-          <Text>Take a photo of your instant print or setup.</Text>
-        </div>
-        <!-- Step 2 -->
-        <div class="flex items-start space-x-5">
-          <span class="font-bold text-tertiary-400 text-2xl">2</span>
-          <Text>Upload your photo using our form.</Text>
-        </div>
-        <!-- Step 3 -->
-        <div class="flex items-start space-x-5">
-          <span class="font-bold text-tertiary-400 text-2xl">3</span>
-          <Text>Share your story and participate in the community.</Text>
-        </div>
-        <!-- Step 4 -->
-        <div class="flex items-start space-x-5">
-          <span class="font-bold text-tertiary-400 text-2xl">4</span>
-          <Text>Attend events and celebrate instant photography.</Text>
-        </div>
-        <div>
-          <Button>Upload Here</Button>
-        </div>
-      </div>
-    </section>
 
     <!-- Inspiration Section -->
-    <section
-      class="grid grid-cols-12 gap-5 mt-10 px-5 lg:px-0 bg-tertiary-400 py-10"
-    >
-      <Heading
-        size="h2"
-        htmlheading="h2"
-        stylingclasses="col-span-12 text-primary-100 text-center lg:text-left"
-      >
-        Inspiration
-      </Heading>
+    <section class="bg-red-700 text-white py-8 px-4 lg:px-32">
+  <!-- Overskrift -->
+   <Heading 
+   size="h2"
+   stylingclasses="pb-4">
+   Inspiration</Heading>
+
+  <!-- Grid container -->
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:grid-rows-8 md:gap-6 lg:grid-cols-5 lg:grid-rows-4">
+    <!-- Billeder -->
+    <img src="/img/inspiration_1.webp" alt="Inspiration 1" class="w-full object-cover col-start-1 row-start-1 col-span-1 row-span-2 lg:col-start-1 lg:row-start-1 lg:col-span-1 lg:row-span-2">
+	<img src="/img/inspiration_2.webp" alt="kamera"  	   class="w-[130px] flex-shrink-0 aspect-[65/56] md:w-[236px] md:aspect-[236/203] col-start-2 row-start-1 col-span-1 row-span-1 lg:col-start-5 lg:row-start-1 lg:col-span-1 lg:row-span-1">
+    <img src="/img/inspiration_3.webp" alt="Inspiration 3" class="w-full object-cover col-start-1 row-start-3 col-span-1 row-span-2 lg:col-start-3 lg:row-start-1 lg:col-span-1 lg:row-span-2">
+    <img src="/img/inspiration_4.webp" alt="Inspiration 4" class="w-full object-cover col-start-2 row-start-2 col-span-1 row-span-2 lg:col-start-2 lg:row-start-2 lg:col-span-1 lg:row-span-2">
+    <img src="/img/inspiration_5.webp" alt="Inspiration 5" class="w-full object-cover col-start-1 row-start-5 col-span-1 row-span-2 lg:col-start-3 lg:row-start-3 lg:col-span-1 lg:row-span-2">
+    <img src="/img/inspiration_6.webp" alt="Inspiration 6" class="w-full object-cover col-start-2 row-start-4 col-span-1 row-span-2 lg:col-start-5 lg:row-start-3 lg:col-span-1 lg:row-span-2">
+    <img src="/img/inspiration_7.webp" alt="Inspiration 7" class="w-full object-cover col-start-2 row-start-6 col-span-1 row-span-2 lg:col-start-4 lg:row-start-2 lg:col-span-1 lg:row-span-2">
+	<img src="/img/inspiration_8.webp" alt="hand"  	       class="w-full              col-start-1 row-start-8 col-span-2 row-span-1 lg:col-start-1 lg:row-start-4 lg:col-span-2 lg:row-span-1">
+  </div>
+  </div>
+
+  <!-- Tekst -->
+  <Heading
+  size="h3"
+  stylingclasses="mt-6 text-base text-center lg:px-217-">
+	Take a look at some of the submissions from the past above for inspiration. You can also get a lot of inspiration from the art Photography scene.
+  </Heading>
+
+  <!-- Pil -->
+ <div class="flex justify-center mt-4">
+  <img 
+    src="/img/arrow.svg" 
+    alt="arrow" 
+    class="animate-bounce-slow cursor-pointer" 
+    x-data 
+    x-on:click="window.scrollBy({ top: 400, behavior: 'smooth' })"
+  >
+</div>
+
+</section>
 
       <div
         class="col-span-12 lg:col-start-2 lg:col-end-12 mt-5 grid grid-cols-2 lg:grid-cols-4 gap-4"
