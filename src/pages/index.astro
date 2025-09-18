@@ -3,48 +3,300 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
+import Footer from "../components/Footer.astro";
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
-import Form from "../components/Form.astro";
-import NomineeCard from "../components/NomineeCard.astro";
-
-
 ---
-<MainLayout title="Titel">
-	<main class="container mx-auto p-4">
-		<Heading size="h1" htmlheading="h1">Lav noget flot!</Heading>
-        <Text>Så bliver Anders glad:-)</Text>
-		<Text teksttype="p_smaller">Så bliver Anders glad:-)</Text>
-		<Text teksttype="p_bold">Så bliver Anders glad:-)</Text>
-		<Text teksttype="p_smallest">Så bliver Anders glad:-)</Text>
-<Button variant="primary">Sort knap</Button>
-<Button variant="secondary">Rød knap</Button>
-<Link href="https://google.com" target="_blank">
-  Visit site
-</Link>
-<Text>
-  Upload your photo and credentials in the form <Link href="#upload-form">below</Link>.
-</Text>
-<section id="upload-form"></section>
-<Form></Form>
-<Heading size="h2" htmlheading="h2" class="px-4 md:px-20">BEST OF 2025 - NOMINEES</Heading>
-<div class="w-full overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-  <section class="flex flex-row gap-6 px-4 md:px-20 py-10 w-max">
-    <NomineeCard title="01 - Amager fælled" img="/img/test.png" submitter="Stefan Grage" description="A little snap from Amager Fælled, a large common in the southwestern part of Copenhagen, Denmark. Taken with a Lomomatic Square." />
-    <NomineeCard title="02 - Amager Forbrænding" img="/img/test.png"
-	submitter="Stefan Grage" description="I’d give my right arm for a cigarette. Taken with a Lomomatic Square." />
-	<NomineeCard title="03 - Amager Strand" img="/img/test.png"
-	submitter="Stefan Grage" description="From this angle, copenhagen looks like a big city. Taken with a Polaroid Now+ gen 2, with a yellow tint filter." />
-   <NomineeCard title="04 - Hands off my happy meal!" img="/img/test.png"
-	submitter="Stefan Grage" description="A casual snap from Burger King. As it shows, the youngest kid didn’t want to share his happy meal (or whatever a kids meal is called in Burger King). Taken with an Instax Mini (can’t remember which camera)." />
-   <NomineeCard title="03 - Amager Strand" img="/img/test.png"
-	submitter="Stefan Grage" description="From this angle, copenhagen looks like a big city. Taken with a Polaroid Now+ gen 2, with a yellow tint filter." />
-   <NomineeCard title="03 - Amager Strand" img="/img/test.png"
-	submitter="Stefan Grage" description="From this angle, copenhagen looks like a big city. Taken with a Polaroid Now+ gen 2, with a yellow tint filter." />
-   
-  </section>
-</div>
 
-	</main>
+<MainLayout title="Hero-section">
+  <main class="overflow-x-hidden">
+    <!-- Hero Section -->
+    <section
+  class="
+    grid
+    grid-cols-5 grid-rows-4       /* mobile-first: 5 cols x 4 rows (you can change cols count if desired) */
+    gap-[10px]                    /* mobile: 10px gap */
+    w-full
+    py-[10px] px-0                /* mobile: 10px vertical padding, no side padding (fills edges) */
+    bg-gray-100
+    lg:grid-cols-5 lg:grid-rows-4 lg:gap-[20px] lg:px-[40px] lg:pb-[60px] lg:pt-0 lg:h-screen
+  "
+>
+  <!-- Box 1 -->
+  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-1 lg:row-start-1">
+    <!-- Responsive heading: default (mobile) big, larger on bigger breakpoints -->
+    <Heading size="hero" stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[8rem] leading-none">
+      I
+    </Heading>
+  </div>
+
+  <!-- Box 2 -->
+  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-2 lg:row-start-1">
+    <!-- empty or replaced with image/text -->
+  </div>
+
+  <!-- Box 3 -->
+  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-3 lg:row-start-1">
+    <Heading size="hero" stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[8rem] leading-none">
+      N
+    </Heading>
+  </div>
+
+  <!-- Box 4 -->
+  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-4 lg:row-start-1">
+    <Heading size="hero" stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[8rem] leading-none">
+      S
+    </Heading>
+  </div>
+
+  <!-- Box 5 (small polaroid image) -->
+  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-5 lg:row-start-1">
+    <!-- mobile: small polaroid, desktop: fill cell -->
+    <img src="/img/heroimg_1.jpg" alt="polaroid" class="w-[60%] sm:w-[70%] lg:w-full h-auto lg:h-full object-cover rounded-sm shadow-sm" />
+  </div>
+
+  <!-- Box 6 (left tall image on desktop, single cell on mobile) -->
+  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-1 lg:row-start-2 lg:row-span-2">
+    <img src="/img/heroimg_2.jpg" alt="tall" class="w-[70%] sm:w-[80%] lg:w-full h-auto lg:h-full object-cover rounded-sm" />
+  </div>
+
+  <!-- Box 7 -->
+  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-2 lg:row-start-2">
+    <Heading size="hero" stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] leading-none">
+      T
+    </Heading>
+  </div>
+
+  <!-- Box 8 -->
+  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-3 lg:row-start-2">
+    <Heading size="hero" stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] leading-none">
+      A
+    </Heading>
+  </div>
+
+  <!-- Box 9 -->
+  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-4 lg:row-start-2">
+    <Heading size="hero" stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] leading-none">
+      N
+    </Heading>
+  </div>
+
+  <!-- Box 10 -->
+  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-5 lg:row-start-2">
+    <Heading size="hero" stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] leading-none">
+      T
+    </Heading>
+  </div>
+
+  <!-- Box 11 (placeholder) -->
+  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-1 lg:row-start-3">
+    <!-- placeholder -->
+  </div>
+
+  <!-- Box 12 (placeholder) -->
+  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-2 lg:row-start-3">
+    <!-- placeholder -->
+  </div>
+
+  <!-- Box 13 (center big image: spans 2x2 on desktop, single square on mobile) -->
+  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-3 lg:row-start-3 lg:col-span-2 lg:row-span-2">
+    <img src="/img/heroimg_3.jpg" alt="center" class="w-[85%] sm:w-[90%] lg:w-full h-auto lg:h-full object-cover rounded-sm" />
+  </div>
+
+  <!-- Box 14 (placeholder) -->
+  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-1 lg:row-start-4">
+    <!-- placeholder -->
+  </div>
+
+  <!-- Box 15: Button (small on mobile, same placed on desktop) -->
+  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-5 lg:row-start-3">
+    <Button variant="primary">Tell a <br />friend</Button>
+  </div>
+
+  <!-- Box 16 -->
+  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-1 lg:row-start-4">
+    <Heading size="hero" stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] leading-none">
+      D
+    </Heading>
+  </div>
+
+  <!-- Box 17 -->
+  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-2 lg:row-start-4">
+    <Heading size="hero" stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] leading-none">
+      A
+    </Heading>
+  </div>
+
+  <!-- Box 18 (placeholder) -->
+  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-3 lg:row-start-4">
+  </div>
+
+  <!-- Box 19 (placeholder) -->
+  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-4 lg:row-start-4">
+  </div>
+
+  <!-- Box 20 -->
+  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-5 lg:row-start-4">
+    <Heading size="hero" stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] leading-none">
+      Y
+    </Heading>
+  </div>
+
+  <!-- Boxes 21–25 (left as placeholders — fill as needed) -->
+  <div class="hidden lg:flex lg:col-start-1 lg:row-start-5"></div>
+  <div class="hidden lg:flex lg:col-start-2 lg:row-start-5"></div>
+  <div class="hidden lg:flex lg:col-start-3 lg:row-start-5"></div>
+  <div class="hidden lg:flex lg:col-start-4 lg:row-start-5"></div>
+  <div class="hidden lg:flex lg:col-start-5 lg:row-start-5"></div>
+</section>
+    <!-- Hero Text -->
+    <Heading
+      size="hero"
+      htmlheading="h1"
+      stylingclasses="col-span-12 lg:col-start-2 lg:col-end-12 text-tertiary-400 text-center lg:text-left mt-10 lg:mt-0"
+    >
+      Instant Day
+    </Heading>
+
+    <!-- Event Info -->
+    <section>
+      <Text
+        stylingclasses="col-span-12 text-tertiary-400 text-center lg:text-left mt-2 lg:mt-5 uppercase tracking-widest"
+      >
+        Celebrate Instant Day
+      </Text>
+      <Text
+        stylingclasses="col-span-12 text-tertiary-400 text-center lg:text-left font-bold mt-1 lg:mt-2"
+      >
+        18th October 2025
+      </Text>
+    </section>
+
+    <!-- Event Image / Collage -->
+    <section class="grid grid-cols-12 gap-5 mt-10 px-5 lg:px-0">
+      <img
+        src="/img/instant-collage.png"
+        alt="Instant Photography"
+        class="col-span-12 lg:col-start-2 lg:col-end-12 w-full object-cover"
+      />
+    </section>
+
+    <!-- What is Instant Day Section -->
+    <section class="grid grid-cols-12 gap-5 mt-10 px-5 lg:px-0">
+      <Heading
+        size="h2"
+        htmlheading="h2"
+        stylingclasses="col-span-12 lg:col-start-2 lg:col-end-12 text-tertiary-400 mt-5"
+      >
+        What is Instant Day?
+      </Heading>
+      <Text stylingclasses="col-span-12 lg:col-start-2 lg:col-end-7 mt-2">
+        Instant Day is a fun, educational event where participants explore
+        instant photography, share their creations, and celebrate the art of
+        instant cameras.
+      </Text>
+    </section>
+
+    <!-- Why Instant Photography Section -->
+    <section
+      class="grid grid-cols-12 gap-5 mt-10 px-5 lg:px-0 bg-secondary-400 py-10"
+    >
+      <Heading
+        size="h2"
+        htmlheading="h2"
+        stylingclasses="col-span-12 lg:col-start-2 lg:col-end-12 text-primary-400"
+      >
+        Why Instant Photography?
+      </Heading>
+      <Text
+        stylingclasses="col-span-12 lg:col-start-2 lg:col-end-7 mt-2 text-primary-100"
+      >
+        Instant photography allows you to capture moments, share stories, and
+        see results instantly. It’s fun, tangible, and encourages creativity.
+      </Text>
+    </section>
+
+    <!-- How to Participate Section -->
+    <section class="grid grid-cols-12 gap-5 mt-10 px-5 lg:px-0">
+      <Heading
+        size="h2"
+        htmlheading="h2"
+        stylingclasses="col-span-12 lg:col-start-2 lg:col-end-12 text-tertiary-400 mt-5"
+      >
+        How to Participate
+      </Heading>
+
+      <div class="col-span-12 lg:col-start-2 lg:col-end-7 mt-5 space-y-10">
+        <!-- Step 1 -->
+        <div class="flex items-start space-x-5">
+          <span class="font-bold text-tertiary-400 text-2xl">1</span>
+          <Text>Take a photo of your instant print or setup.</Text>
+        </div>
+        <!-- Step 2 -->
+        <div class="flex items-start space-x-5">
+          <span class="font-bold text-tertiary-400 text-2xl">2</span>
+          <Text>Upload your photo using our form.</Text>
+        </div>
+        <!-- Step 3 -->
+        <div class="flex items-start space-x-5">
+          <span class="font-bold text-tertiary-400 text-2xl">3</span>
+          <Text>Share your story and participate in the community.</Text>
+        </div>
+        <!-- Step 4 -->
+        <div class="flex items-start space-x-5">
+          <span class="font-bold text-tertiary-400 text-2xl">4</span>
+          <Text>Attend events and celebrate instant photography.</Text>
+        </div>
+        <div>
+          <Button>Upload Here</Button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inspiration Section -->
+    <section
+      class="grid grid-cols-12 gap-5 mt-10 px-5 lg:px-0 bg-tertiary-400 py-10"
+    >
+      <Heading
+        size="h2"
+        htmlheading="h2"
+        stylingclasses="col-span-12 text-primary-100 text-center lg:text-left"
+      >
+        Inspiration
+      </Heading>
+
+      <div
+        class="col-span-12 lg:col-start-2 lg:col-end-12 mt-5 grid grid-cols-2 lg:grid-cols-4 gap-4"
+      >
+        <img
+          src="/img/insp1.png"
+          alt="Inspiration 1"
+          class="w-full object-cover"
+        />
+        <img
+          src="/img/insp2.png"
+          alt="Inspiration 2"
+          class="w-full object-cover"
+        />
+        <img
+          src="/img/insp3.png"
+          alt="Inspiration 3"
+          class="w-full object-cover"
+        />
+        <img
+          src="/img/insp4.png"
+          alt="Inspiration 4"
+          class="w-full object-cover"
+        />
+      </div>
+
+      <Text
+        stylingclasses="col-span-12 text-primary-100 mt-5 text-center lg:text-left"
+      >
+        Take a look at some of the submissions from previous years for
+        inspiration.
+      </Text>
+    </section>
+  </main>
 </MainLayout>
