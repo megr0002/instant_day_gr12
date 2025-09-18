@@ -4,7 +4,7 @@ import Button from "./Button.astro";
 import Terms from "./Terms.astro";
 ---
 
-<MainLayout title="Form">
+<section title="Form">
   <!-- Main form wrapper -->
    <div x-data="{ open: false }">
   <form class="max-w-3xl mx-auto space-y-6 font-mono text-secondary-400">
@@ -94,7 +94,7 @@ import Terms from "./Terms.astro";
 
   <!-- Include the modal -->
    <div x-show="open">
-<Terms /> 
+  <Terms /> 
    </div>
-</div>
-</MainLayout>
+  </div>
+</section>
