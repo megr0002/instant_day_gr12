@@ -47,10 +47,12 @@ import Terms from "./Terms.astro";
       <!-- File upload -->
       <div class="flex flex-col">
         <label for="upload" class="font-bold mb-1">Photo upload</label>
+        <label for="upload" class="border border-black px-3 py-2 cursor-pointer underline w-full font-bold text-tertiary-400">
+        Click to upload
         <input
           type="file"
           id="upload"
-          class="border border-black px-3 py-2 file:cursor-pointer file:border-0 file:underline file:text-secondary-400"
+          class="hidden"
         />
       </div>
     </section>
@@ -76,10 +78,10 @@ import Terms from "./Terms.astro";
         I have read and agree to 
         <button 
          x-on:click="open = ! open"
-          class="underline font-bold"
+          class="underline font-bold text-tertiary-400"
               >
           the terms and conditions
-        </button>
+        </button>.
       </label>
     </div>
 
