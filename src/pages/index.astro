@@ -171,15 +171,12 @@ import Guide from "../components/Guide.astro";
 
       <!-- Box 15: Button (small on mobile, same placed on desktop) -->
       <div
-  class="flex items-center justify-center self-stretch lg:aspect-square lg:col-start-5 lg:row-start-3"
->
-  <Button
-    variant="tertiary"
-    class="lg:w-full lg:h-full"
-  >
-    Tell a <br />friend
-  </Button>
-</div>
+        class="flex items-center justify-center self-stretch lg:aspect-square lg:col-start-5 lg:row-start-3"
+      >
+        <Button variant="tertiary" class="lg:w-full lg:h-full">
+          Tell a <br />friend
+        </Button>
+      </div>
 
       <!-- Box 16 -->
       <div
@@ -322,13 +319,16 @@ import Guide from "../components/Guide.astro";
     </section>
 
     <!-- How to Participate Section -->
-	 <section>
-    <Guide />
-	<Button
-	variant="secondary"
-	
-	>upload here</Button> /*** MAGLER STYLING PÅ KNAP IFT POSITIONERING OG BAGGRUNDSFARVE PÅ SEKTIONEN */
-	</section>
+    <section>
+      <Guide />
+      <div class="pt-9 pb-12 lg:pt-24.25 lg:pb-38">
+        <Button 
+		variant="secondary"
+		stylingclasses="place-self-center"
+		>upload here</Button> /*** MAGLER STYLING PÅ KNAP
+        IFT POSITIONERING OG BAGGRUNDSFARVE PÅ SEKTIONEN */
+      </div>
+    </section>
     <!-- Inspiration Section -->
     <section class="bg-red-700 text-white py-8 px-4 lg:px-32">
       <!-- Overskrift -->
@@ -381,107 +381,119 @@ import Guide from "../components/Guide.astro";
         />
       </div>
 
-    <!-- Tekst -->
-    <Heading size="h3" stylingclasses="mt-6 text-base text-center lg:px-217-">
-      Take a look at some of the submissions from the past above for
-      inspiration. You can also get a lot of inspiration from the art
-      Photography scene.
-    </Heading>
+      <!-- Tekst -->
+      <Heading size="h3" stylingclasses="mt-6 text-base text-center lg:px-217-">
+        Take a look at some of the submissions from the past above for
+        inspiration. You can also get a lot of inspiration from the art
+        Photography scene.
+      </Heading>
 
-    <!-- Pil -->
-    <div class="flex justify-center mt-4">
-      <img
-        src="/img/arrow.svg"
-        alt="arrow"
-        class="animate-bounce-slow cursor-pointer"
-        x-data
-        x-on:click="window.scrollBy({ top: 400, behavior: 'smooth' })"
-      />
-    </div>
+      <!-- Pil -->
+      <div class="flex justify-center mt-4">
+        <img
+          src="/img/arrow.svg"
+          alt="arrow"
+          class="animate-bounce-slow cursor-pointer"
+          x-data
+          x-on:click="window.scrollBy({ top: 400, behavior: 'smooth' })"
+        />
+      </div>
     </section>
-
-</section>
-
-<!-- Inspiration Text -->
-
-	<section class="bg-primary-400 px-5 py-6 lg:px-62.5 lg:pt-17.5 lg:pb-25">
-  <!-- Wrapper for Grid -->
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-7">
-    
-    <!-- Box 1: Dan Isaac Wallin -->
-    <div class="flex flex-col items-center lg:items-start lg:mb-15">
-      <img class="w-full lg:w-auto" src="img/dan_isaac.webp" alt="Dan Isaac Wallin" />
-      <Button
-        stylingclasses="mt-4 lg:mt-0 mr-5 md:w-73"
-        href="https://www.danisaacwallin.com/"
-        target="_blank"
-      >Wallin's work</Button>
-    </div>
-    <div class="flex flex-col items-center lg:items-start lg:justify-center">
-      <Text>
-        <span class="text-tertiary-400">Dan Isaac Wallin</span> is a Swedish art
-        photographer, who uses large format and vintage Polaroid cameras for his
-        work. His work hangs in numerous houses as posters.
-      </Text>
-    </div>
-
-    <!-- Box 2: Mette Kelter -->
-    <div class="flex flex-col items-center lg:items-start lg:mb-15">
-      <img class="w-full lg:w-auto" src="img/mette_kelter.webp" alt="Mette Kelter" />
-      <Button
-        stylingclasses="mt-4 lg:mt-0 mr-5 md:w-73"
-        href="https://www.kelterphotography.com/"
-        target="_blank"
-      >Kelter's work</Button>
-    </div>
-    <div class="flex flex-col items-center lg:items-start lg:justify-center">
-      <Text>
-        <span class="text-tertiary-400">Mette Kelter</span> is a Danish art photographer, who often
-        experiments with deliberate destruction of the chemical process in instant photos. One
-        of the key words here is unpredictability in the work process, which leads to interesting
-        and unique artworks.
-      </Text>
-    </div>
-
-    <!-- Box 3: Maripol -->
-    <div class="flex flex-col items-center lg:items-start lg:mb-15">
-      <img class="w-full lg:w-auto" src="img/maripol.webp" alt="Maripol" />
-      <Button
-        stylingclasses="mt-4 lg:mt-0 mr-5 md:w-73"
-        href="https://en.wikipedia.org/wiki/Maripol"
-        target="_blank"
-      >Maripol's work</Button>
-    </div>
-    <div class="flex flex-col items-center lg:items-start lg:justify-center">
-      <Text>
-        <span class="text-tertiary-400">Maripol</span> is a French artist/photographer/film producer. 
-        Her claim to fame was in the 1980s, where she photographed famous people with a Polaroid SX-70.
-        Her photographs are still very influential in the fashion industry.
-      </Text>
-    </div>
-
-    <!-- Box 4: The Polaroid Book -->
-    <div class="flex flex-col items-center lg:items-start lg:mb-15">
-      <img class="w-full lg:w-auto" src="img/polaroidbook.webp" alt="The Polaroid Book" />
-      <Button
-        stylingclasses="mt-4 lg:mt-0 mr-5 md:w-73"
-        href="https://www.taschen.com/en/books/photography/40752/the-polaroid-book-45th-ed/"
-        target="_blank"
-      >The Polaroid Book</Button>
-    </div>
-    <div class="flex flex-col items-center lg:items-start lg:justify-center">
-      <Text>
-        The Polaroid collection was a large collection of instant photographs assembled by the Polaroid
-        corporation and featured work from a lot of famous photographers. The collection was split into
-        various parts and put on auction when the Polaroid corporation went into bankruptcy in 2008.
-        Luckily, you can find books with photographs from the collection, for instance <a href="https://www.taschen.com/books/polaroidbook" target="_blank" class="text-tertiary-400">The Polaroid Book</a> by Steve Crist and Barbara Hitchcock.
-      </Text>
-    </div>
-
-  </div>
-</section>
-
-
   </main>
 
+  <!-- Inspiration Text -->
+
+  <section class="bg-primary-400 px-5 py-6 lg:px-62.5 lg:pt-17.5 lg:pb-25">
+    <!-- Wrapper for Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-7">
+      <!-- Box 1: Dan Isaac Wallin -->
+      <div class="flex flex-col items-center lg:items-start lg:mb-15">
+        <img
+          class="w-full lg:w-auto"
+          src="img/dan_isaac.webp"
+          alt="Dan Isaac Wallin"
+        />
+        <Button
+          stylingclasses="mt-4 lg:mt-0 mr-5 md:w-73"
+          href="https://www.danisaacwallin.com/"
+          target="_blank">Wallin's work</Button
+        >
+      </div>
+      <div class="flex flex-col items-center lg:items-start lg:justify-center">
+        <Text>
+          <span class="text-tertiary-400">Dan Isaac Wallin</span> is a Swedish art
+          photographer, who uses large format and vintage Polaroid cameras for his
+          work. His work hangs in numerous houses as posters.
+        </Text>
+      </div>
+
+      <!-- Box 2: Mette Kelter -->
+      <div class="flex flex-col items-center lg:items-start lg:mb-15">
+        <img
+          class="w-full lg:w-auto"
+          src="img/mette_kelter.webp"
+          alt="Mette Kelter"
+        />
+        <Button
+          stylingclasses="mt-4 lg:mt-0 mr-5 md:w-73"
+          href="https://www.kelterphotography.com/"
+          target="_blank">Kelter's work</Button
+        >
+      </div>
+      <div class="flex flex-col items-center lg:items-start lg:justify-center">
+        <Text>
+          <span class="text-tertiary-400">Mette Kelter</span> is a Danish art photographer,
+          who often experiments with deliberate destruction of the chemical process
+          in instant photos. One of the key words here is unpredictability in the
+          work process, which leads to interesting and unique artworks.
+        </Text>
+      </div>
+
+      <!-- Box 3: Maripol -->
+      <div class="flex flex-col items-center lg:items-start lg:mb-15">
+        <img class="w-full lg:w-auto" src="img/maripol.webp" alt="Maripol" />
+        <Button
+          stylingclasses="mt-4 lg:mt-0 mr-5 md:w-73"
+          href="https://en.wikipedia.org/wiki/Maripol"
+          target="_blank">Maripol's work</Button
+        >
+      </div>
+      <div class="flex flex-col items-center lg:items-start lg:justify-center">
+        <Text>
+          <span class="text-tertiary-400">Maripol</span> is a French artist/photographer/film
+          producer. Her claim to fame was in the 1980s, where she photographed famous
+          people with a Polaroid SX-70. Her photographs are still very influential
+          in the fashion industry.
+        </Text>
+      </div>
+
+      <!-- Box 4: The Polaroid Book -->
+      <div class="flex flex-col items-center lg:items-start lg:mb-15">
+        <img
+          class="w-full lg:w-auto"
+          src="img/polaroidbook.webp"
+          alt="The Polaroid Book"
+        />
+        <Button
+          stylingclasses="mt-4 lg:mt-0 mr-5 md:w-73"
+          href="https://www.taschen.com/en/books/photography/40752/the-polaroid-book-45th-ed/"
+          target="_blank">The Polaroid Book</Button
+        >
+      </div>
+      <div class="flex flex-col items-center lg:items-start lg:justify-center">
+        <Text>
+          The Polaroid collection was a large collection of instant photographs
+          assembled by the Polaroid corporation and featured work from a lot of
+          famous photographers. The collection was split into various parts and
+          put on auction when the Polaroid corporation went into bankruptcy in
+          2008. Luckily, you can find books with photographs from the
+          collection, for instance <a
+            href="https://www.taschen.com/books/polaroidbook"
+            target="_blank"
+            class="text-tertiary-400">The Polaroid Book</a
+          > by Steve Crist and Barbara Hitchcock.
+        </Text>
+      </div>
+    </div>
+  </section>
 </MainLayout>
