@@ -3,12 +3,12 @@
 const { variant= "primary", size = "medium", stylingclasses=""} = Astro.props; 
  
 //Definer den styling (Tailwind classes, der gør sig gældende for alle knapper)
-const buttonStyling = "inline-flex items-center gap-[10px] px-[25px] py-[15px] text-primary-400 font-mono font-bold uppercase"; 
- 
+const buttonStyling = "inline-flex items-center gap-[10px] px-[25px] py-[15px] text-primary-400 font-mono font-bold uppercase justify-center border-2"; 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter 
 const variantClasses = {
-"primary": "bg-secondary-400 hover:bg-tertiary-700", 
-"secondary": "bg-tertiary-400 hover:bg-tertiary-700", 
+"primary": "bg-secondary-400 hover:bg-tertiary-700",
+  "secondary": "bg-tertiary-400 hover:bg-tertiary-700",
+  "tertiary": "bg-transparent border-tertiary-400 text-tertiary-400 hover:bg-tertiary-400 hover:text-primary-400 w-full h-full justify-center lg:justify-end",
 };
  
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.

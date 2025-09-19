@@ -7,253 +7,493 @@ import Footer from "../components/Footer.astro";
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
+import Guide from "../components/Guide.astro";
 ---
 
 <MainLayout title="Hero-section">
   <main class="overflow-x-hidden">
     <!-- Hero Section -->
     <section
-  class="
-    grid
-    grid-cols-5 grid-rows-4       /* mobile-first: 5 cols x 4 rows (you can change cols count if desired) */
-    gap-[10px]                    /* mobile: 10px gap */
+      class="grid
+    grid-cols-5 grid-rows-4 /* mobile-first: 5 cols x 4 rows (you can change cols count if desired) */
+    gap-[10px] /* mobile: 10px gap */
     w-full
-    py-[10px] px-0                /* mobile: 10px vertical padding, no side padding (fills edges) */
+    py-[10px] px-0 /* mobile: 10px vertical padding, no side padding (fills edges) */
     bg-gray-100
-    lg:grid-cols-5 lg:grid-rows-4 lg:gap-[20px] lg:px-[40px] lg:pb-[60px] lg:pt-0 lg:h-screen
-  "
->
-  <!-- Box 1 -->
-  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-1 lg:row-start-1">
-    <!-- Responsive heading: default (mobile) big, larger on bigger breakpoints -->
-    <Heading size="hero" stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[8rem] leading-none">
-      I
-    </Heading>
-  </div>
-
-  <!-- Box 2 -->
-  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-2 lg:row-start-1">
-    <!-- empty or replaced with image/text -->
-  </div>
-
-  <!-- Box 3 -->
-  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-3 lg:row-start-1">
-    <Heading size="hero" stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[8rem] leading-none">
-      N
-    </Heading>
-  </div>
-
-  <!-- Box 4 -->
-  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-4 lg:row-start-1">
-    <Heading size="hero" stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[8rem] leading-none">
-      S
-    </Heading>
-  </div>
-
-  <!-- Box 5 (small polaroid image) -->
-  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-5 lg:row-start-1">
-    <!-- mobile: small polaroid, desktop: fill cell -->
-    <img src="/img/heroimg_1.jpg" alt="polaroid" class="w-[60%] sm:w-[70%] lg:w-full h-auto lg:h-full object-cover rounded-sm shadow-sm" />
-  </div>
-
-  <!-- Box 6 (left tall image on desktop, single cell on mobile) -->
-  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-1 lg:row-start-2 lg:row-span-2">
-    <img src="/img/heroimg_2.jpg" alt="tall" class="w-[70%] sm:w-[80%] lg:w-full h-auto lg:h-full object-cover rounded-sm" />
-  </div>
-
-  <!-- Box 7 -->
-  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-2 lg:row-start-2">
-    <Heading size="hero" stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] leading-none">
-      T
-    </Heading>
-  </div>
-
-  <!-- Box 8 -->
-  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-3 lg:row-start-2">
-    <Heading size="hero" stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] leading-none">
-      A
-    </Heading>
-  </div>
-
-  <!-- Box 9 -->
-  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-4 lg:row-start-2">
-    <Heading size="hero" stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] leading-none">
-      N
-    </Heading>
-  </div>
-
-  <!-- Box 10 -->
-  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-5 lg:row-start-2">
-    <Heading size="hero" stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] leading-none">
-      T
-    </Heading>
-  </div>
-
-  <!-- Box 11 (placeholder) -->
-  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-1 lg:row-start-3">
-    <!-- placeholder -->
-  </div>
-
-  <!-- Box 12 (placeholder) -->
-  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-2 lg:row-start-3">
-    <!-- placeholder -->
-  </div>
-
-  <!-- Box 13 (center big image: spans 2x2 on desktop, single square on mobile) -->
-  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-3 lg:row-start-3 lg:col-span-2 lg:row-span-2">
-    <img src="/img/heroimg_3.jpg" alt="center" class="w-[85%] sm:w-[90%] lg:w-full h-auto lg:h-full object-cover rounded-sm" />
-  </div>
-
-  <!-- Box 14 (placeholder) -->
-  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-1 lg:row-start-4">
-    <!-- placeholder -->
-  </div>
-
-  <!-- Box 15: Button (small on mobile, same placed on desktop) -->
-  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-5 lg:row-start-3">
-    <Button variant="primary">Tell a <br />friend</Button>
-  </div>
-
-  <!-- Box 16 -->
-  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-1 lg:row-start-4">
-    <Heading size="hero" stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] leading-none">
-      D
-    </Heading>
-  </div>
-
-  <!-- Box 17 -->
-  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-2 lg:row-start-4">
-    <Heading size="hero" stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] leading-none">
-      A
-    </Heading>
-  </div>
-
-  <!-- Box 18 (placeholder) -->
-  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-3 lg:row-start-4">
-  </div>
-
-  <!-- Box 19 (placeholder) -->
-  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-4 lg:row-start-4">
-  </div>
-
-  <!-- Box 20 -->
-  <div class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-5 lg:row-start-4">
-    <Heading size="hero" stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] leading-none">
-      Y
-    </Heading>
-  </div>
-
-  <!-- Boxes 21–25 (left as placeholders — fill as needed) -->
-  <div class="hidden lg:flex lg:col-start-1 lg:row-start-5"></div>
-  <div class="hidden lg:flex lg:col-start-2 lg:row-start-5"></div>
-  <div class="hidden lg:flex lg:col-start-3 lg:row-start-5"></div>
-  <div class="hidden lg:flex lg:col-start-4 lg:row-start-5"></div>
-  <div class="hidden lg:flex lg:col-start-5 lg:row-start-5"></div>
-</section>
-   
-    <!-- Event Info -->
-    <section class="bg-tertiary-400 text-right">
-      <Text
-        stylingclasses="col-span-12 text-tertiary-400 text-center lg:text-left mt-2 lg:mt-5 uppercase tracking-widest"
-      >
-        Celebrate Instant Day
-      </Text>
-      <Text
-        stylingclasses="col-span-12 text-tertiary-400 text-center lg:text-left font-bold mt-1 lg:mt-2"
-      >
-        18th October 2025
-      </Text>
-    </section>
-
-    <!-- Event Image / Collage -->
-    <section class="grid grid-cols-12 gap-5 mt-10 px-5 lg:px-0">
-      <img
-        src="/img/instant-collage.png"
-        alt="Instant Photography"
-        class="col-span-12 lg:col-start-2 lg:col-end-12 w-full object-cover"
-      />
-    </section>
-
-    <!-- What is Instant Day Section -->
-
-    <!-- Why Instant Photography Section -->
-
-
-    <!-- How to Participate Section -->
-
-    <!-- Inspiration Section -->
-    <section class="bg-red-700 text-white py-8 px-4 lg:px-32">
-  <!-- Overskrift -->
-   <Heading 
-   size="h2"
-   stylingclasses="pb-4">
-   Inspiration</Heading>
-
-  <!-- Grid container -->
-  <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:grid-rows-8 md:gap-6 lg:grid-cols-5 lg:grid-rows-4">
-    <!-- Billeder -->
-    <img src="/img/inspiration_1.webp" alt="Inspiration 1" class="w-full object-cover col-start-1 row-start-1 col-span-1 row-span-2 lg:col-start-1 lg:row-start-1 lg:col-span-1 lg:row-span-2">
-	<img src="/img/inspiration_2.webp" alt="kamera"  	   class="w-[130px] flex-shrink-0 aspect-[65/56] md:w-[236px] md:aspect-[236/203] col-start-2 row-start-1 col-span-1 row-span-1 lg:col-start-5 lg:row-start-1 lg:col-span-1 lg:row-span-1">
-    <img src="/img/inspiration_3.webp" alt="Inspiration 3" class="w-full object-cover col-start-1 row-start-3 col-span-1 row-span-2 lg:col-start-3 lg:row-start-1 lg:col-span-1 lg:row-span-2">
-    <img src="/img/inspiration_4.webp" alt="Inspiration 4" class="w-full object-cover col-start-2 row-start-2 col-span-1 row-span-2 lg:col-start-2 lg:row-start-2 lg:col-span-1 lg:row-span-2">
-    <img src="/img/inspiration_5.webp" alt="Inspiration 5" class="w-full object-cover col-start-1 row-start-5 col-span-1 row-span-2 lg:col-start-3 lg:row-start-3 lg:col-span-1 lg:row-span-2">
-    <img src="/img/inspiration_6.webp" alt="Inspiration 6" class="w-full object-cover col-start-2 row-start-4 col-span-1 row-span-2 lg:col-start-5 lg:row-start-3 lg:col-span-1 lg:row-span-2">
-    <img src="/img/inspiration_7.webp" alt="Inspiration 7" class="w-full object-cover col-start-2 row-start-6 col-span-1 row-span-2 lg:col-start-4 lg:row-start-2 lg:col-span-1 lg:row-span-2">
-	<img src="/img/inspiration_8.webp" alt="hand"  	       class="w-full              col-start-1 row-start-8 col-span-2 row-span-1 lg:col-start-1 lg:row-start-4 lg:col-span-2 lg:row-span-1">
-  </div>
-  </div>
-
-  <!-- Tekst -->
-  <Heading
-  size="h3"
-  stylingclasses="mt-6 text-base text-center lg:px-217-">
-	Take a look at some of the submissions from the past above for inspiration. You can also get a lot of inspiration from the art Photography scene.
-  </Heading>
-
-  <!-- Pil -->
- <div class="flex justify-center mt-4">
-  <img 
-    src="/img/arrow.svg" 
-    alt="arrow" 
-    class="animate-bounce-slow cursor-pointer" 
-    x-data 
-    x-on:click="window.scrollBy({ top: 400, behavior: 'smooth' })"
-  >
-</div>
-
-</section>
-
+    lg:grid-cols-5 lg:grid-rows-4 lg:gap-[20px] lg:px-[40px] lg:pb-[60px] lg:pt-0 lg:h-screen"
+    >
+      <!-- Box 1 -->
       <div
-        class="col-span-12 lg:col-start-2 lg:col-end-12 mt-5 grid grid-cols-2 lg:grid-cols-4 gap-4"
+        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-1 lg:row-start-1"
       >
+        <!-- Responsive heading: default (mobile) big, larger on bigger breakpoints -->
+        <Heading
+          size="hero"
+          stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[8rem] leading-none"
+        >
+          I
+        </Heading>
+      </div>
+
+      <!-- Box 2 -->
+      <div
+        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-2 lg:row-start-1"
+      >
+        <!-- empty or replaced with image/text -->
+      </div>
+
+      <!-- Box 3 -->
+      <div
+        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-3 lg:row-start-1"
+      >
+        <Heading
+          size="hero"
+          stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[8rem] leading-none"
+        >
+          N
+        </Heading>
+      </div>
+
+      <!-- Box 4 -->
+      <div
+        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-4 lg:row-start-1"
+      >
+        <Heading
+          size="hero"
+          stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[8rem] leading-none"
+        >
+          S
+        </Heading>
+      </div>
+
+      <!-- Box 5 (small polaroid image) -->
+      <div
+        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-5 lg:row-start-1"
+      >
+        <!-- mobile: small polaroid, desktop: fill cell -->
         <img
-          src="/img/insp1.png"
-          alt="Inspiration 1"
-          class="w-full object-cover"
-        />
-        <img
-          src="/img/insp2.png"
-          alt="Inspiration 2"
-          class="w-full object-cover"
-        />
-        <img
-          src="/img/insp3.png"
-          alt="Inspiration 3"
-          class="w-full object-cover"
-        />
-        <img
-          src="/img/insp4.png"
-          alt="Inspiration 4"
-          class="w-full object-cover"
+          src="/img/heroimg_1.jpg"
+          alt="polaroid"
+          class="w-[60%] sm:w-[70%] lg:w-full h-auto lg:h-full object-cover rounded-sm shadow-sm"
         />
       </div>
 
-      <Text
-        stylingclasses="col-span-12 text-primary-100 mt-5 text-center lg:text-left"
+      <!-- Box 6 (left tall image on desktop, single cell on mobile) -->
+      <div
+        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-1 lg:row-start-2 lg:row-span-2"
       >
-        Take a look at some of the submissions from previous years for
-        inspiration.
-      </Text>
+        <img
+          src="/img/heroimg_2.jpg"
+          alt="tall"
+          class="w-[70%] sm:w-[80%] lg:w-full h-auto lg:h-full object-cover rounded-sm"
+        />
+      </div>
+
+      <!-- Box 7 -->
+      <div
+        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-2 lg:row-start-2"
+      >
+        <Heading
+          size="hero"
+          stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] leading-none"
+        >
+          T
+        </Heading>
+      </div>
+
+      <!-- Box 8 -->
+      <div
+        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-3 lg:row-start-2"
+      >
+        <Heading
+          size="hero"
+          stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] leading-none"
+        >
+          A
+        </Heading>
+      </div>
+
+      <!-- Box 9 -->
+      <div
+        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-4 lg:row-start-2"
+      >
+        <Heading
+          size="hero"
+          stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] leading-none"
+        >
+          N
+        </Heading>
+      </div>
+
+      <!-- Box 10 -->
+      <div
+        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-5 lg:row-start-2"
+      >
+        <Heading
+          size="hero"
+          stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] leading-none"
+        >
+          T
+        </Heading>
+      </div>
+
+      <!-- Box 11 (placeholder) -->
+      <div
+        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-1 lg:row-start-3"
+      >
+        <!-- placeholder -->
+      </div>
+
+      <!-- Box 12 (placeholder) -->
+      <div
+        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-2 lg:row-start-3"
+      >
+        <!-- placeholder -->
+      </div>
+
+      <!-- Box 13 (center big image: spans 2x2 on desktop, single square on mobile) -->
+      <div
+        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-3 lg:row-start-3 lg:col-span-2 lg:row-span-2"
+      >
+        <img
+          src="/img/heroimg_3.jpg"
+          alt="center"
+          class="w-[85%] sm:w-[90%] lg:w-full h-auto lg:h-full object-cover rounded-sm"
+        />
+      </div>
+
+      <!-- Box 14 (placeholder) -->
+      <div
+        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-1 lg:row-start-4"
+      >
+        <!-- placeholder -->
+      </div>
+
+      <!-- Box 15: Button (small on mobile, same placed on desktop) -->
+      <div
+        class="flex items-center justify-center self-stretch lg:aspect-square lg:col-start-5 lg:row-start-3"
+      >
+        <Button variant="tertiary" class="lg:w-full lg:h-full">
+          Tell a <br />friend
+        </Button>
+      </div>
+
+      <!-- Box 16 -->
+      <div
+        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-1 lg:row-start-4"
+      >
+        <Heading
+          size="hero"
+          stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] leading-none"
+        >
+          D
+        </Heading>
+      </div>
+
+      <!-- Box 17 -->
+      <div
+        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-2 lg:row-start-4"
+      >
+        <Heading
+          size="hero"
+          stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] leading-none"
+        >
+          A
+        </Heading>
+      </div>
+
+      <!-- Box 18 (placeholder) -->
+      <div
+        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-3 lg:row-start-4"
+      >
+      </div>
+
+      <!-- Box 19 (placeholder) -->
+      <div
+        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-4 lg:row-start-4"
+      >
+      </div>
+
+      <!-- Box 20 -->
+      <div
+        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-5 lg:row-start-4"
+      >
+        <Heading
+          size="hero"
+          stylingclasses="text-center text-[3.2rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] leading-none"
+        >
+          Y
+        </Heading>
+      </div>
+
+      <!-- Boxes 21–25 (left as placeholders — fill as needed) -->
+      <div class="hidden lg:flex lg:col-start-1 lg:row-start-5"></div>
+      <div class="hidden lg:flex lg:col-start-2 lg:row-start-5"></div>
+      <div class="hidden lg:flex lg:col-start-3 lg:row-start-5"></div>
+      <div class="hidden lg:flex lg:col-start-4 lg:row-start-5"></div>
+      <div class="hidden lg:flex lg:col-start-5 lg:row-start-5"></div>
+    </section>
+
+    <!-- Event Info -->
+    <section class="bg-tertiary-400 pt-25 pr-5.5 lg:pr-32">
+      <p
+        class="text-secondary-400 text-[25px] lg:text-[60px] text-right mt-2 lg:text-5 lg:mt-5 uppercase"
+      >
+        Celebrate Instant Day
+      </p>
+      <Heading
+        size="h1"
+        stylingclasses="text-primary-400 text-right mt-1 lg:mt-2"
+      >
+        18th October 2025
+      </Heading>
+    </section>
+
+    <!-- What is Instant Day Section -->
+    <section class="lg:grid lg:grid-cols-12 lg:gap-5">
+      <img
+        src="/img/polaroid_collage.webp"
+        alt="A lot of polaroids"
+        class="w-full h-auto m-auto px-15 py-5 lg:h-screen object-cover lg:p-0 lg:col-start-7 lg:col-end-13 lg:row-start-1"
+      />
+      <div
+        class="px-5 lg:col-start-2 lg:col-end-7 lg:row-start-1 pb-15 lg:px-0 lg:flex lg:flex-col lg:justify-between"
+      >
+        <Heading size="h1" htmlheading="h1" stylingclasses=""
+          >What is instant day?</Heading
+        >
+        <Text>
+          <span class="text-tertiary-400">October 18</span> is Instant Day - a day
+          all about celebrating instant photography. So get out your Polaroid, Instax
+          or whatever instant photography camera you are using, and show us your
+          instants. <br />Instant Day isn´t really a photo competition, it´s
+          more a homage to <span class="text-tertiary-400"
+            >good old analogue, instant photography</span
+          > - everybody who participates are winners. But: We do have a nice prize
+          for one lucky instant photographer!
+        </Text>
+      </div>
+    </section>
+
+    <!-- Why Instant Photography Section -->
+    <section class="bg-secondary-400 lg:grid lg:grid-cols-12 lg:gap-5">
+      <Heading
+        size="h1"
+        htmlheading="h1"
+        stylingclasses="pt-15 px-5 text-primary-400 lg:col-start-2 lg:col-end-12 lg:text-right lg:pt-20"
+        >Why instant photography?</Heading
+      >
+      <div
+        class="px-5 text-primary-400 lg:col-start-7 lg:col-end-12 lg:row-start-2 lg:px-0"
+      >
+        <Text stylingclasses="pb-4">
+          Instant Photography is a testament to life: It all started back in the <span
+            class="text-tertiary-100">1940’s</span
+          > with a 3 year old kid. She wanted to see her fathers images right away.
+          The father, <span class="text-tertiary-100">Edwin Land</span>,
+          embarked on a mission: To invent instant photography.
+        </Text>
+        <Text stylingclasses="pb-4">
+          Half a decade later, Edwin Land launched Instant photography and
+          established the <span class="text-tertiary-100">Polaroid</span> brand.
+          Instant photography turned into big business in the 70’s and 80’s, until
+          the digital era almost killed the industry.
+        </Text>
+        <Text stylingclasses="pb-10 lg:pb-0 lg:mb-40">
+          The massive amount of time wasted on the small screens have spurred a
+          counterreaction: Analogue, off-line experiences have become popular
+          again. And instant photography is just that: An <span
+            class="text-tertiary-100">analogue, life-affirming and tactile</span
+          > photography experience. So let’s celebrate life, and make memories!
+        </Text>
+      </div>
+      <div
+        class="lg:col-start-2 lg:col-end-6 lg:row-start-2 lg:flex lg:flex-col lg:justify-end"
+      >
+        <img
+          src="/img/edwin_land_result.webp"
+          alt="Edwin Land"
+          class="px-5 pb-15 lg:px-0 lg:pb-0 lg:mb-40"
+        />
+      </div>
+    </section>
+
+    <!-- How to Participate Section -->
+    <section>
+      <Guide />
+      <div class="pt-9 pb-12 lg:pt-24.25 lg:pb-38">
+        <Button 
+		variant="secondary"
+		stylingclasses="place-self-center"
+		>upload here</Button> /*** MAGLER STYLING PÅ KNAP
+        IFT POSITIONERING OG BAGGRUNDSFARVE PÅ SEKTIONEN */
+      </div>
+    </section>
+    <!-- Inspiration Section -->
+    <section class="bg-red-700 text-white py-8 px-4 lg:px-32">
+      <!-- Overskrift -->
+      <Heading size="h2" stylingclasses="pb-4"> Inspiration</Heading>
+
+      <!-- Grid container -->
+      <div
+        class="grid grid-cols-1 gap-4 md:grid-cols-2 md:grid-rows-8 md:gap-6 lg:grid-cols-5 lg:grid-rows-4"
+      >
+        <!-- Billeder -->
+        <img
+          src="/img/inspiration_1.webp"
+          alt="Inspiration 1"
+          class="w-full object-cover col-start-1 row-start-1 col-span-1 row-span-2 lg:col-start-1 lg:row-start-1 lg:col-span-1 lg:row-span-2"
+        />
+        <img
+          src="/img/inspiration_2.webp"
+          alt="kamera"
+          class="w-[130px] flex-shrink-0 aspect-[65/56] md:w-[236px] md:aspect-[236/203] col-start-2 row-start-1 col-span-1 row-span-1 lg:col-start-5 lg:row-start-1 lg:col-span-1 lg:row-span-1"
+        />
+        <img
+          src="/img/inspiration_3.webp"
+          alt="Inspiration 3"
+          class="w-full object-cover col-start-1 row-start-3 col-span-1 row-span-2 lg:col-start-3 lg:row-start-1 lg:col-span-1 lg:row-span-2"
+        />
+        <img
+          src="/img/inspiration_4.webp"
+          alt="Inspiration 4"
+          class="w-full object-cover col-start-2 row-start-2 col-span-1 row-span-2 lg:col-start-2 lg:row-start-2 lg:col-span-1 lg:row-span-2"
+        />
+        <img
+          src="/img/inspiration_5.webp"
+          alt="Inspiration 5"
+          class="w-full object-cover col-start-1 row-start-5 col-span-1 row-span-2 lg:col-start-3 lg:row-start-3 lg:col-span-1 lg:row-span-2"
+        />
+        <img
+          src="/img/inspiration_6.webp"
+          alt="Inspiration 6"
+          class="w-full object-cover col-start-2 row-start-4 col-span-1 row-span-2 lg:col-start-5 lg:row-start-3 lg:col-span-1 lg:row-span-2"
+        />
+        <img
+          src="/img/inspiration_7.webp"
+          alt="Inspiration 7"
+          class="w-full object-cover col-start-2 row-start-6 col-span-1 row-span-2 lg:col-start-4 lg:row-start-2 lg:col-span-1 lg:row-span-2"
+        />
+        <img
+          src="/img/inspiration_8.webp"
+          alt="hand"
+          class="w-full col-start-1 row-start-8 col-span-2 row-span-1 lg:col-start-1 lg:row-start-4 lg:col-span-2 lg:row-span-1"
+        />
+      </div>
+
+      <!-- Tekst -->
+      <Heading size="h3" stylingclasses="mt-6 text-base text-center lg:px-217-">
+        Take a look at some of the submissions from the past above for
+        inspiration. You can also get a lot of inspiration from the art
+        Photography scene.
+      </Heading>
+
+      <!-- Pil -->
+      <div class="flex justify-center mt-4">
+        <img
+          src="/img/arrow.svg"
+          alt="arrow"
+          class="animate-bounce-slow cursor-pointer"
+          x-data
+          x-on:click="window.scrollBy({ top: 400, behavior: 'smooth' })"
+        />
+      </div>
     </section>
   </main>
+
+  <!-- Inspiration Text -->
+
+  <section class="bg-primary-400 px-5 py-6 lg:px-62.5 lg:pt-17.5 lg:pb-25">
+    <!-- Wrapper for Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-7">
+      <!-- Box 1: Dan Isaac Wallin -->
+      <div class="flex flex-col items-center lg:items-start lg:mb-15">
+        <img
+          class="w-full lg:w-auto"
+          src="img/dan_isaac.webp"
+          alt="Dan Isaac Wallin"
+        />
+        <Button
+          stylingclasses="mt-4 lg:mt-0 mr-5 md:w-73"
+          href="https://www.danisaacwallin.com/"
+          target="_blank">Wallin's work</Button
+        >
+      </div>
+      <div class="flex flex-col items-center lg:items-start lg:justify-center">
+        <Text>
+          <span class="text-tertiary-400">Dan Isaac Wallin</span> is a Swedish art
+          photographer, who uses large format and vintage Polaroid cameras for his
+          work. His work hangs in numerous houses as posters.
+        </Text>
+      </div>
+
+      <!-- Box 2: Mette Kelter -->
+      <div class="flex flex-col items-center lg:items-start lg:mb-15">
+        <img
+          class="w-full lg:w-auto"
+          src="img/mette_kelter.webp"
+          alt="Mette Kelter"
+        />
+        <Button
+          stylingclasses="mt-4 lg:mt-0 mr-5 md:w-73"
+          href="https://www.kelterphotography.com/"
+          target="_blank">Kelter's work</Button
+        >
+      </div>
+      <div class="flex flex-col items-center lg:items-start lg:justify-center">
+        <Text>
+          <span class="text-tertiary-400">Mette Kelter</span> is a Danish art photographer,
+          who often experiments with deliberate destruction of the chemical process
+          in instant photos. One of the key words here is unpredictability in the
+          work process, which leads to interesting and unique artworks.
+        </Text>
+      </div>
+
+      <!-- Box 3: Maripol -->
+      <div class="flex flex-col items-center lg:items-start lg:mb-15">
+        <img class="w-full lg:w-auto" src="img/maripol.webp" alt="Maripol" />
+        <Button
+          stylingclasses="mt-4 lg:mt-0 mr-5 md:w-73"
+          href="https://en.wikipedia.org/wiki/Maripol"
+          target="_blank">Maripol's work</Button
+        >
+      </div>
+      <div class="flex flex-col items-center lg:items-start lg:justify-center">
+        <Text>
+          <span class="text-tertiary-400">Maripol</span> is a French artist/photographer/film
+          producer. Her claim to fame was in the 1980s, where she photographed famous
+          people with a Polaroid SX-70. Her photographs are still very influential
+          in the fashion industry.
+        </Text>
+      </div>
+
+      <!-- Box 4: The Polaroid Book -->
+      <div class="flex flex-col items-center lg:items-start lg:mb-15">
+        <img
+          class="w-full lg:w-auto"
+          src="img/polaroidbook.webp"
+          alt="The Polaroid Book"
+        />
+        <Button
+          stylingclasses="mt-4 lg:mt-0 mr-5 md:w-73"
+          href="https://www.taschen.com/en/books/photography/40752/the-polaroid-book-45th-ed/"
+          target="_blank">The Polaroid Book</Button
+        >
+      </div>
+      <div class="flex flex-col items-center lg:items-start lg:justify-center">
+        <Text>
+          The Polaroid collection was a large collection of instant photographs
+          assembled by the Polaroid corporation and featured work from a lot of
+          famous photographers. The collection was split into various parts and
+          put on auction when the Polaroid corporation went into bankruptcy in
+          2008. Luckily, you can find books with photographs from the
+          collection, for instance <a
+            href="https://www.taschen.com/books/polaroidbook"
+            target="_blank"
+            class="text-tertiary-400">The Polaroid Book</a
+          > by Steve Crist and Barbara Hitchcock.
+        </Text>
+      </div>
+    </div>
+  </section>
 </MainLayout>
