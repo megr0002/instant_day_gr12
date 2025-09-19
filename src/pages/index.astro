@@ -24,7 +24,7 @@ import Guide from "../components/Guide.astro";
     >
       <!-- Box 1 -->
       <div
-        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-1 lg:row-start-1"
+        class="flex items-center justify-center self-stretch aspect-square aspect-auto col-start-1 row-start-1"
       >
         <!-- Responsive heading: default (mobile) big, larger on bigger breakpoints -->
         <Heading
@@ -37,14 +37,14 @@ import Guide from "../components/Guide.astro";
 
       <!-- Box 2 -->
       <div
-        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-2 lg:row-start-1"
+        class="flex items-center justify-center self-stretch aspect-square aspect-auto col-start-2 row-start-1"
       >
         <!-- empty or replaced with image/text -->
       </div>
 
       <!-- Box 3 -->
       <div
-        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-3 lg:row-start-1"
+        class="flex items-center justify-center self-stretch aspect-square aspect-auto col-start-3 row-start-1"
       >
         <Heading
           size="hero"
@@ -56,7 +56,7 @@ import Guide from "../components/Guide.astro";
 
       <!-- Box 4 -->
       <div
-        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-4 lg:row-start-1"
+        class="flex items-center justify-center self-stretch aspect-square aspect-auto col-start-4 row-start-1"
       >
         <Heading
           size="hero"
@@ -68,7 +68,7 @@ import Guide from "../components/Guide.astro";
 
       <!-- Box 5 (small polaroid image) -->
       <div
-        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-5 lg:row-start-1"
+        class="sm:w:[70%] lg:w-full lg:h-auto lg:h-full object cover flex items-center justify-center self-stretch aspect-square aspect-auto col-start-5 row-start-1"
       >
         <!-- mobile: small polaroid, desktop: fill cell -->
         <img
@@ -80,18 +80,18 @@ import Guide from "../components/Guide.astro";
 
       <!-- Box 6 (left tall image on desktop, single cell on mobile) -->
       <div
-        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-1 lg:row-start-2 lg:row-span-2"
+        class="flex items-center justify-center self-stretch aspect-square col-start-1 row-start-2 row-span-1"
       >
         <img
           src="/img/heroimg_2.jpg"
           alt="tall"
-          class="w-[70%] sm:w-[80%] lg:w-full h-auto lg:h-full object-cover rounded-sm"
+          class="sm:w-[80%] lg:w-full h-auto lg:h-full object-cover rounded-sm self-stretch"
         />
       </div>
 
       <!-- Box 7 -->
       <div
-        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-2 lg:row-start-2"
+        class="flex items-center justify-center self-stretch aspect-square aspect-auto col-start-2 row-start-2"
       >
         <Heading
           size="hero"
@@ -103,7 +103,7 @@ import Guide from "../components/Guide.astro";
 
       <!-- Box 8 -->
       <div
-        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-3 lg:row-start-2"
+        class="flex items-center justify-center self-stretch aspect-square aspect-auto col-start-3 row-start-2"
       >
         <Heading
           size="hero"
@@ -115,7 +115,7 @@ import Guide from "../components/Guide.astro";
 
       <!-- Box 9 -->
       <div
-        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-4 lg:row-start-2"
+        class="flex items-center justify-center self-stretch aspect-square aspect-auto col-start-4 row-start-2"
       >
         <Heading
           size="hero"
@@ -127,7 +127,7 @@ import Guide from "../components/Guide.astro";
 
       <!-- Box 10 -->
       <div
-        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-5 lg:row-start-2"
+        class="flex items-center justify-center self-stretch aspect-square aspect-auto col-start-5 row-start-2"
       >
         <Heading
           size="hero"
@@ -139,39 +139,39 @@ import Guide from "../components/Guide.astro";
 
       <!-- Box 11 (placeholder) -->
       <div
-        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-1 lg:row-start-3"
+        class="w-[85%] sm:w:[90%] lg:w-full lg:h-auto lg:h-full object cover flex items-center justify-center self-stretch aspect-auto col-start-1 row-start-3"
       >
         <!-- placeholder -->
       </div>
 
       <!-- Box 12 (placeholder) -->
       <div
-        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-2 lg:row-start-3"
+        class="flex items-center justify-center self-stretch aspect-square aspect-auto col-start-2 row-start-3"
       >
         <!-- placeholder -->
       </div>
 
       <!-- Box 13 (center big image: spans 2x2 on desktop, single square on mobile) -->
       <div
-        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-3 lg:row-start-3 lg:col-span-2 lg:row-span-2"
+        class="flex items-center justify-center aspect-square aspect-auto col-start-3 row-start-3 col-span-2 row-span-2"
       >
         <img
           src="/img/heroimg_3.jpg"
           alt="center"
-          class="w-[85%] sm:w-[90%] lg:w-full h-auto lg:h-full object-cover rounded-sm"
+          class="w-[85%] sm:w-[90%] lg:w-full h-auto lg:h-full object-cover rounded-sm self-stretch shadow-sm"
         />
       </div>
 
       <!-- Box 14 (placeholder) -->
       <div
-        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-1 lg:row-start-4"
+        class="flex items-center justify-center self-stretch aspect-square aspect-auto col-start-1 row-start-4"
       >
         <!-- placeholder -->
       </div>
 
       <!-- Box 15: Button (small on mobile, same placed on desktop) -->
       <div
-        class="flex items-center justify-center self-stretch lg:aspect-square lg:col-start-5 lg:row-start-3"
+        class="flex items-center justify-end w-full self-stretch aspect-square col-start-5 row-start-3"
       >
         <Button variant="tertiary" class="lg:w-full lg:h-full">
           Tell a <br />friend
@@ -180,7 +180,7 @@ import Guide from "../components/Guide.astro";
 
       <!-- Box 16 -->
       <div
-        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-1 lg:row-start-4"
+        class="flex items-center justify-center self-stretch aspect-square aspect-auto col-start-1 row-start-4"
       >
         <Heading
           size="hero"
@@ -192,7 +192,7 @@ import Guide from "../components/Guide.astro";
 
       <!-- Box 17 -->
       <div
-        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-2 lg:row-start-4"
+        class="flex items-center justify-center self-stretch aspect-square aspect-auto col-start-2 row-start-4"
       >
         <Heading
           size="hero"
@@ -204,19 +204,19 @@ import Guide from "../components/Guide.astro";
 
       <!-- Box 18 (placeholder) -->
       <div
-        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-3 lg:row-start-4"
+        class="flex items-center justify-center self-stretch aspect-square aspect-auto col-start-3 row-start-4"
       >
       </div>
 
       <!-- Box 19 (placeholder) -->
       <div
-        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-4 lg:row-start-4"
+        class="flex items-center justify-center self-stretch aspect-square aspect-auto col-start-4 row-start-4"
       >
       </div>
 
       <!-- Box 20 -->
       <div
-        class="flex items-center justify-center self-stretch aspect-square lg:aspect-auto lg:col-start-5 lg:row-start-4"
+        class="flex items-center justify-center self-stretch aspect-square aspect-auto col-start-5 row-start-4"
       >
         <Heading
           size="hero"
@@ -237,13 +237,13 @@ import Guide from "../components/Guide.astro";
     <!-- Event Info -->
     <section class="bg-tertiary-400 pt-25 pr-5.5 lg:pr-32">
       <p
-        class="text-secondary-400 text-[25px] lg:text-[60px] text-right mt-2 lg:text-5 lg:mt-5 uppercase"
+        class="text-primary-400 text-[25px] lg:text-[60px] text-right mt-2 lg:text-5 lg:mt-15 uppercase"
       >
         Celebrate Instant Day
       </p>
       <Heading
-        size="h1"
-        stylingclasses="text-primary-400 text-right mt-1 lg:mt-2"
+        size="h2"
+        stylingclasses="text-primary-400 text-right mt-1 lg:mt-1 lg:text-[95px]"
       >
         18th October 2025
       </Heading>
@@ -320,11 +320,11 @@ import Guide from "../components/Guide.astro";
 
     <!-- How to Participate Section -->
     <section>
-  <Guide />
-  <div class="pt-9 pb-12 lg:pt-24.25 lg:pb-38 grid place-items-center">
-    <Button variant="secondary">upload here</Button>
-  </div>
-</section>
+      <Guide />
+      <div class="pt-9 pb-12 lg:pt-24.25 lg:pb-38 grid place-items-center">
+        <Button variant="secondary">upload here</Button>
+      </div>
+    </section>
 
     <!-- Inspiration Section -->
     <section class="bg-red-700 text-white py-8 px-4 lg:px-32">

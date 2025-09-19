@@ -2,51 +2,57 @@
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 ---
-<header 
-x-data="{ showmenu: false }" 
-class="bg-primary-400 border-b-2 border-secondary-400 relative z-40" 
-x-effect="document.documentElement.classList.toggle('overflow-hidden', showmenu)">
 
-    <!-- NAVBAR -->
-    <div id="navbar" 
+<header
+  x-data="{ showmenu: false }"
+  class="bg-primary-400 border-b-2 border-secondary-400 relative z-40"
+  x-effect="document.documentElement.classList.toggle('overflow-hidden', showmenu)"
+>
+  <!-- NAVBAR -->
+  <div
+    id="navbar"
     class="p-4 flex flex-row justify-between items-center lg:py-6 lg:px-10 transition-opacity duration-200"
     :class="showmenu ? 'opacity-0 pointer-events-none' : 'opacity-100'"
-    >
-        <!-- logo -->
-        <div id="logo">
-            <a href="/">
-                <img src="/img/logo.svg" alt="Instant Day Logo" class="w-14 h-auto">
-            </a>
-        </div>
-        <!-- desktopmenu" fjernet -->
+  >
+    <!-- logo -->
+    <div id="logo">
+      <a href="/">
+        <img src="/img/logo.svg" alt="Instant Day Logo" class="w-14 h-auto" />
+      </a>
+    </div>
+    <!-- desktopmenu" fjernet -->
 
-        <!-- burgermenu knap -->
-         <button 
-         id="burgermenu" 
-         @click="showmenu = ! showmenu" 
-         class="flex flex-col items-center cursor-pointer text-center select-none"
-         aria-controls="mobilmenu"
+    <!-- burgermenu knap -->
+    <button
+      id="burgermenu"
+      @click="showmenu = ! showmenu"
+      class="flex flex-col items-center cursor-pointer text-center select-none"
+      aria-controls="mobilmenu"
       :aria-expanded="showmenu"
-         >
-         <div class="relative block w-14 h-4">
-         <!-- øverste linje -->
+    >
+      <div class="relative block w-14 h-4">
+        <!-- øverste linje -->
         <span
           class="absolute inset-x-0 top-0 h-1 bg-secondary-400 transition-transform duration-200"
           :class="showmenu ? 'translate-y-[11px] rotate-45 bg-primary-100' : ''"
         ></span>
         <!-- midterste linje -->
-         <span
+        <span
           class="absolute inset-x-0 bottom-0 h-1 bg-secondary-400 transition-transform duration-200"
           :class="showmenu ? '-translate-y-[11px] -rotate-45 bg-primary-100' : ''"
         ></span>
-        </div>
-            <p class="font-sans text-[18px] uppercase mt-1 text-secondary-400 transition-opacity duration-150"
-        :class="showmenu ? 'opacity-0' : 'opacity-100'">menu</p>
-        </button>
-    </div>
-    <!-- FULLSCREEN OVERLAY-MENU -->
-    <nav 
-    id="mobilmenu" 
+      </div>
+      <p
+        class="font-sans text-[18px] uppercase mt-1 text-secondary-400 transition-opacity duration-150"
+        :class="showmenu ? 'opacity-0' : 'opacity-100'"
+      >
+        menu
+      </p>
+    </button>
+  </div>
+  <!-- FULLSCREEN OVERLAY-MENU -->
+  <nav
+    id="mobilmenu"
     x-cloak
     x-show="showmenu"
     @click="showmenu = false"
@@ -58,35 +64,78 @@ x-effect="document.documentElement.classList.toggle('overflow-hidden', showmenu)
     x-transition:leave-start="translate-y-0"
     x-transition:leave-end="-translate-y-full"
     class="fixed inset-0 z-50 bg-tertiary-400 text-primary-100"
+  >
+    <!-- close button -->
+    <button
+      @click="showmenu = false"
+      class="absolute top-8 right-2 flex flex-col items-center cursor-pointer text-center select-none z-50 lg:right-10 lg:top-10"
+      aria-label="Close menu"
     >
-        <!-- close button -->
-        <button
-  @click="showmenu = false"
-  class="absolute top-8 right-2 flex flex-col items-center cursor-pointer text-center select-none z-50 lg:right-10 lg:top-10"
-  aria-label="Close menu"
->
-  <div class="relative block w-14 h-4">
-    <span class="absolute left-0 right-0 top-1/2 h-1 bg-primary-100 transition-transform duration-200 -translate-y-1/2 rotate-45"></span>
-    <span class="absolute left-0 right-0 top-1/2 h-1 bg-primary-100 transition-transform duration-200 -translate-y-1/2 -rotate-45"></span>
-  </div>
-</button>
-        <!-- menu items -->
-        <ul class="mt-50 lg:mt-25 lg:pr-7">
-            <li class="text-right text-primary-400 text-[30px] lg:text-[95px] pr-5 uppercase lg:leading-[1.2]">
-                <a href="/" class={currentPath === "" ? "font-bold relative transition-colors duration-300 link-underline" : "relative transition-colors duration-300 link-underline"}>Home</a>
-            </li>
-            <li class="text-right  text-primary-400 text-[30px] lg:text-[95px] pr-5 uppercase lg:leading-[1.2]">
-                <a href="/shareyourinstant/" class={currentPath === "shareyourinstant/" ? "font-bold relative transition-colors duration-300 link-underline" : "relative transition-colors duration-300 link-underline"}>Share your instant</a>
-            </li>
-            <li class="text-right  text-primary-400 text-[30px] lg:text-[95px] pr-5 uppercase lg:leading-[1.2]">
-                <a href="/winnerandnominees/" class={currentPath === "winnerandnominees/" ? " font-bold relative transition-colors duration-300 link-underline" : "relative transition-colors duration-300 link-underline"}>Nominees</a>
-            </li>
-            <li class="text-right  text-primary-400 text-[30px] lg:text-[95px] pr-5 uppercase lg:leading-[1.2]">
-                <a href="/info/" class={currentPath === "info/" ? " font-bold relative transition-colors duration-300 link-underline" : "relative transition-colors duration-300 link-underline"}>Who are we?</a>
-            </li>
-            <li class="text-right  text-primary-400 text-[30px] lg:text-[95px] pr-5 uppercase lg:leading-[1.2]">
-                <a href="/komponentbibliotek/" class={currentPath === "komponentbibliotek/" ? " font-bold relative transition-colors duration-300 link-underline" : "relative transition-colors duration-300 link-underline"}>Komponentbibliotek</a>
-            </li>
-        </ul>
-    </nav>
+      <div class="relative block w-14 h-4">
+        <span
+          class="absolute left-0 right-0 top-1/2 h-1 bg-primary-100 transition-transform duration-200 -translate-y-1/2 rotate-45"
+        ></span>
+        <span
+          class="absolute left-0 right-0 top-1/2 h-1 bg-primary-100 transition-transform duration-200 -translate-y-1/2 -rotate-45"
+        ></span>
+      </div>
+    </button>
+    <!-- menu items -->
+    <ul class="mt-50 lg:mt-25 lg:pr-7">
+      <li
+        class="text-right text-primary-400 text-[30px] lg:text-[95px] pr-5 uppercase lg:leading-[1.2]"
+      >
+        <a
+          href="/"
+          class={currentPath === ""
+            ? "font-bold relative transition-colors duration-300 link-underline"
+            : "relative transition-colors duration-300 link-underline"}>Home</a
+        >
+      </li>
+      <li
+        class="text-right text-primary-400 text-[30px] lg:text-[95px] pr-5 uppercase lg:leading-[1.2]"
+      >
+        <a
+          href="/shareyourinstant/"
+          class={currentPath === "shareyourinstant/"
+            ? "font-bold relative transition-colors duration-300 link-underline"
+            : "relative transition-colors duration-300 link-underline"}
+          >Share your instant</a
+        >
+      </li>
+      <li
+        class="text-right text-primary-400 text-[30px] lg:text-[95px] pr-5 uppercase lg:leading-[1.2]"
+      >
+        <a
+          href="/winnerandnominees/"
+          class={currentPath === "winnerandnominees/"
+            ? " font-bold relative transition-colors duration-300 link-underline"
+            : "relative transition-colors duration-300 link-underline"}
+          >Nominees</a
+        >
+      </li>
+      <li
+        class="text-right text-primary-400 text-[30px] lg:text-[95px] pr-5 uppercase lg:leading-[1.2]"
+      >
+        <a
+          href="/info/"
+          class={currentPath === "info/"
+            ? " font-bold relative transition-colors duration-300 link-underline"
+            : "relative transition-colors duration-300 link-underline"}
+          >Who are we?</a
+        >
+      </li>
+      <li
+        class="text-right text-primary-400 text-[30px] lg:text-[95px] pr-5 uppercase lg:leading-[1.2]"
+      >
+        <a
+          href="/komponentbibliotek/"
+          class={currentPath === "komponentbibliotek/"
+            ? " font-bold relative transition-colors duration-300 link-underline"
+            : "relative transition-colors duration-300 link-underline"}
+          >Komponentbibliotek</a
+        >
+      </li>
+    </ul>
+  </nav>
 </header>

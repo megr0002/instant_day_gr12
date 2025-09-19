@@ -8,7 +8,9 @@
 /* Helvetica Neue lt STD 95 */
 @font-face {
   font-family: "Helvetica";
-  src: url("/fonts/helvetica_neue_lt_std_95_black-webfont.woff2") format("woff2"), url("/fonts/helvetica_neue_lt_std_95_black-webfont.woff") format("woff");
+  src:
+    url("/fonts/helvetica_neue_lt_std_95_black-webfont.woff2") format("woff2"),
+    url("/fonts/helvetica_neue_lt_std_95_black-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -47,8 +49,13 @@
 @layer components {
   /* animationer osv. */
   @keyframes bounce-slow {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
   }
 
   .animate-bounce-slow {
@@ -77,4 +84,9 @@
 
 .link-underline:hover::after {
   width: 100%;
+}
+
+/* src/styles/global.css */
+[x-cloak] {
+  display: none !important;
 }
