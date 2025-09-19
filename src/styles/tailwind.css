@@ -59,3 +59,22 @@
 @layer utilities {
   /* custom utilities, browser reset */
 }
+
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 5px;
+  background-color: var(--color-primary-400);
+  transition: width 0.3s;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
